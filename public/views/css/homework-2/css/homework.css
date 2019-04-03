@@ -19,10 +19,76 @@ footer {
 }
 
 /* Your styles go below */
-box-sizing: border-box;
-td {
-  padding: 15px 3px;
+
+table.headertable {
+  margin-left: 15px;
 }
-table {
-  width: 100%;
+td {
+  padding: 10px 0px;
+}
+a {
+  margin: 5px;
+}
+.login {
+  margin-left: 50px;
+}
+.cellheader {
+  width: 80%;
+}
+p.labelgallery {
+  font-size: 30px;
+  font-family: Arial;
+  font-weight: bold;
+  margin: 20px 20px;
+}
+table.gallery {
+  width: 98%;
+  margin-left: 20px;
+}
+.gallery {
+  border: 1px solid grey;
+}
+.column, .row {
+  border: 1px solid grey;
+}
+img {
+  padding: 20px 40px;
+  width: auto;
+}
+p.about_gallery {
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: bold;
+  margin: 20px 20px;
+}
+p.sibscribe {
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+p.article {
+  text-indent: 25px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+input {
+  border: 1px solid grey;
+  margin-left: 20px;
+  padding: 5px;
+}
+button {
+  border: 1px solid grey;
+  margin-left: 20px;
+  font-weight: bold;
+  font-family: Arial;
+  padding: 7px;
+  font-size: 15px;
+}
+p.footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 15px;
 }
