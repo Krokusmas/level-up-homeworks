@@ -5,70 +5,74 @@
     <title>Document</title>
     <style>a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}button,input,optgroup,select,textarea{background:0 0;border:0;padding:0;margin:0;font:inherit;color:inherit;box-shadow:none}button{height:auto;cursor:pointer}button:focus{outline:0}button::-moz-focus-inner{outline:0;border:0;padding:0}
     </style>
-    <link rel="stylesheet" href="css/homework.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="wrapper">
       <header>
         <table class="headertable">
-          <tr>
-            <td>
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">Portfolio</a>
-              <a href="#">Contacts</a>
-            </td>
-            <td class="cellheader">
-            </td>
-            <td>
-              <a href="#">Log in</a>
-              /
-              <a href="#">Sign in</a>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contacts</a>
+              </td>
+              <td>
+                <a href="#">Log in</a>
+                /
+                <a href="#">Sign in</a>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </header>
-      <aside>
-        <p class="labelgallery">Gallery</p>
+      <main>
+        <h1 class="labelgallery">Gallery</h1>
         <table class="gallery">
-          <tr class="row">
-            <td class="column">
-              <img src="images/1.jpg" alt="civil war" />
-            </td>
-            <td class="column">
-              <img src="images/2.jpg" alt="civil war" />
-            </td>
-            <td class="column">
-              <img src="images/3.jpg" alt="civil war" />
-            </td>
-          </tr>
-          <tr class="row">
-            <td class="column">
-              <img src="images/4.jpg" alt="civil war" />
-            </td>
-            <td class="column">
-              <img src="images/5.jpg" alt="civil war" />
-            </td>
-            <td class="column">
-              <img src="images/6.jpg" alt="civil war" />
-            </td>
-          </tr>
+          <tbody>
+            <tr class="row">
+              <td class="column">
+                <img src="images/1.jpg" alt="civil war" />
+              </td>
+              <td class="column">
+                <img src="images/2.jpg" alt="civil war" />
+              </td>
+              <td class="column">
+                <img src="images/3.jpg" alt="civil war" />
+              </td>
+            </tr>
+            <tr class="row">
+              <td class="column">
+                <img src="images/4.jpg" alt="civil war" />
+              </td>
+              <td class="column">
+                <img src="images/5.jpg" alt="civil war" />
+              </td>
+              <td class="column">
+                <img src="images/6.jpg" alt="civil war" />
+              </td>
+            </tr>
+          </tbody>
         </table>
-        <p class="about_gallery">About gallery</p>
-        <p class="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      </main>
+      <h2 class="about-gallery">About gallery</h2>
+      <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="sibscribe">Subscribe for new updates</p>
-        <form method="POST">
-          <input type="email" name="email" placeholder="Email*" />
-          <button type="submit">SUBSCRIBE</button>
-        </form>
-      </aside>
+      </article>
+      <h2 class="subscribe">Subscribe for new updates</h2>
+      <form method="POST">
+        <input type="email" name="email" placeholder="Email*" />
+        <button type="submit">Subscribe</button>
+      </form>
       <footer>
-        <p class="footer">©Copyright 2018</p>
+        <p>©Copyright 2018</p>
       </footer>
     </div>
   </body>

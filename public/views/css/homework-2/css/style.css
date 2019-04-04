@@ -20,32 +20,24 @@ footer {
 
 /* Your styles go below */
 
-table.headertable {
+body {
+  font-family: Arial;
+}
+.headertable {
   margin-left: 15px;
-}
-td {
-  padding: 10px 0px;
-}
-a {
-  margin: 5px;
 }
 .login {
   margin-left: 50px;
 }
-.cellheader {
-  width: 80%;
-}
-p.labelgallery {
+.labelgallery {
   font-size: 30px;
-  font-family: Arial;
   font-weight: bold;
-  margin: 20px 20px;
-}
-table.gallery {
-  width: 98%;
-  margin-left: 20px;
+  margin: 20px;
 }
 .gallery {
+  width: 98%;
+  margin-right: 20px;
+  margin-left: 20px;
   border: 1px solid grey;
 }
 .column, .row {
@@ -54,39 +46,40 @@ table.gallery {
 img {
   padding: 20px 40px;
 }
-p.about_gallery {
+.about-gallery {
   font-size: 20px;
-  font-family: Arial;
   font-weight: bold;
-  margin: 20px 20px;
+  margin: 20px;
 }
-p.sibscribe {
+.subscribe {
   font-size: 20px;
-  font-family: Arial;
   font-weight: bold;
   margin-top: 40px;
-  margin-left: 20px;
   margin-bottom: 20px;
-}
-p.article {
-  text-indent: 25px;
   margin-left: 20px;
+}
+article {
+  text-indent: 25px;
   margin-right: 40px;
+  margin-left: 20px;
 }
 input {
+  height: 40px;
   border: 1px solid grey;
   margin-left: 20px;
-  padding: 5px;
+  padding-left: 10px;
 }
 button {
+  height: 40px;
   border: 1px solid grey;
   margin-left: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-weight: bold;
-  font-family: Arial;
-  padding: 7px;
   font-size: 15px;
+  text-transform: uppercase;
 }
-p.footer {
+footer {
   text-align: center;
   margin-top: 50px;
   padding: 15px;
