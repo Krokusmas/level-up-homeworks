@@ -20,14 +20,20 @@ footer {
 
 /* Your styles go below */
 
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: Arial;
 }
-.headertable {
-  margin-left: 15px;
+header {
+  padding: 20px;
 }
-.login {
-  margin-left: 50px;
+.headertable {
+  width: 100%;
+}
+.log-in {
+  text-align: right;
 }
 .labelgallery {
   font-size: 30px;
@@ -40,11 +46,11 @@ body {
   margin-left: 20px;
   border: 1px solid grey;
 }
-.column, .row {
+.column {
   border: 1px solid grey;
 }
-img {
-  padding: 20px 40px;
+.column {
+  padding: 20px 80px;
 }
 .about-gallery {
   font-size: 20px;
@@ -78,6 +84,9 @@ button {
   font-weight: bold;
   font-size: 15px;
   text-transform: uppercase;
+}
+button:hover {
+  border: 1px solid red;
 }
 footer {
   text-align: center;
