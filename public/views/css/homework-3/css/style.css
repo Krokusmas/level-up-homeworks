@@ -30,9 +30,6 @@ header {
   font-weight: bold;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
-main {
-  margin-bottom: 50px;
-}
 .menu {
   text-transform: capitalize;
   color: white;
@@ -45,9 +42,9 @@ main {
   text-decoration: underline;
 } 
 .content {
-  padding: 100px 50px 0 50px;
+  margin: auto;
+  padding-top: 100px;
   width: 1170px;
-  outline: 1px solid red;
 }
 .gallery-title {
   text-transform: capitalize;
@@ -56,7 +53,7 @@ main {
   margin-bottom: 40px;
 }
 .cards {
-  width: 320px;
+  width: 373px;
   margin-right: 20px;
   margin-bottom: 20px;
   display: inline-block;
@@ -97,16 +94,27 @@ h2:first-letter {
   padding-top: 10px;
   padding-left: 10px;
 }
+.gallery {
+  margin-bottom: 30px;
+}
 .page-navigation {
   text-align: center;
 }
-
+.page-num-active {
+  color: blue;
+  padding-right: 20px;
+}
+.page-num {
+  padding-right: 20px;
+  text-decoration: underline;
+}
+main {
+  margin-bottom: 50px;
+}
 footer {
-  outline: 1px solid red;
   text-align: center;
   color: white;
   background-color: #3F51B5;
   padding: 15px;
   font-weight: bold;
 }
-
