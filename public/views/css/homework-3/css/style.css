@@ -31,14 +31,11 @@ header {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .menu {
-  text-transform: capitalize;
   color: white;
   text-decoration: none;
   padding-right: 15px;
 }
 .menu-active {
-  text-transform: capitalize;
-  color: white;
   text-decoration: underline;
 } 
 .content {
@@ -47,41 +44,41 @@ header {
   width: 1170px;
 }
 .gallery-title {
-  text-transform: capitalize;
   font-size: 35px;
   font-weight: bold;
   margin-bottom: 40px;
 }
-.cards {
+.card {
   width: 373px;
+  position: relative;
   margin-right: 20px;
   margin-bottom: 20px;
   display: inline-block;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
-.cards:nth-child(3), .cards:nth-child(6) {
+.card:nth-child(3n) {
   margin-right: 0;
 }
 img {
   max-width: 100%;
+}
+.card-image {
   padding-bottom: 25px;
 }
 .card-name {
   font-size: 30px;
   margin-bottom: 25px;
 }
-h2:first-letter {
-  text-transform: uppercase;
-}
-.supporting-text {
+.card-supporting-text {
   padding: 15px;
 }
-.description {
+.card-description {
   margin-bottom: 15px;
 }
-.buttons {
+.button {
   display: block;
-  padding: 10px;
+  height: 40px;
+  padding: 12px;
   text-transform: uppercase;
   color: white;
   width: 100%;
@@ -91,8 +88,8 @@ h2:first-letter {
 }
 .favorites {
   position: absolute;
-  padding-top: 10px;
-  padding-left: 10px;
+  top: 10px;
+  left: 10px;
 }
 .gallery {
   margin-bottom: 30px;
@@ -100,16 +97,17 @@ h2:first-letter {
 .page-navigation {
   text-align: center;
 }
-.page-num-active {
-  color: blue;
-  padding-right: 20px;
-}
 .page-num {
   padding-right: 20px;
   text-decoration: underline;
 }
+.page-num-active {
+  color: blue;
+  padding-right: 20px;
+  text-decoration: none;
+}
 main {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 footer {
   text-align: center;
