@@ -41,6 +41,7 @@ header {
 .content {
   margin: auto;
   padding-top: 100px;
+  padding-bottom: 50px;
   width: 1170px;
 }
 .gallery-title {
@@ -49,8 +50,7 @@ header {
   margin-bottom: 40px;
 }
 .card {
-  width: 373px;
-  position: relative;
+  width: 376px;
   margin-right: 20px;
   margin-bottom: 20px;
   display: inline-block;
@@ -63,6 +63,7 @@ img {
   max-width: 100%;
 }
 .card-image {
+  position: relative;
   padding-bottom: 25px;
 }
 .card-name {
@@ -70,15 +71,17 @@ img {
   margin-bottom: 25px;
 }
 .card-supporting-text {
+  font-size: 16px;
   padding: 15px;
 }
 .card-description {
   margin-bottom: 15px;
 }
 .button {
-  display: block;
+  display: inline-block;
+  line-height: 40px;
   height: 40px;
-  padding: 12px;
+  vertical-align: middle;
   text-transform: uppercase;
   color: white;
   width: 100%;
@@ -92,6 +95,7 @@ img {
   left: 10px;
 }
 .gallery {
+  font-size: 0;
   margin-bottom: 30px;
 }
 .page-navigation {
@@ -105,9 +109,6 @@ img {
   color: blue;
   padding-right: 20px;
   text-decoration: none;
-}
-main {
-  padding-bottom: 50px;
 }
 footer {
   text-align: center;
