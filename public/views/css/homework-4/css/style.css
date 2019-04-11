@@ -1,0 +1,162 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  color: #444;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Unknown props */
+/* box-shadow: 0 2px 5px rgba(0,0,0,.26); - header */
+/* border-radius: 3px; - card rounding */
+/* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); - card shadow */
+/* border-top-left-radius: 3px;
+  border-top-right-radius: 3px; - for card image */
+
+/* Your styles go below */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../images/pattern.png");
+}
+.page-top {
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  background-color: #4CAF50;
+}
+.menu {
+  margin: auto; 
+  width: 1170px;
+  padding: 20px 15px 20px 0;
+  text-transform: uppercase;
+  color: white;
+}
+.login {
+  text-transform: none;
+  float: right;
+}
+.nav-page {
+  margin-right: 15px;
+}
+.login-page {
+  margin-right: 15px;
+}
+.nav-page-active {
+  padding-bottom: 17px;
+  border-bottom: 2px solid #FFEB3B;
+}
+.background-intro {
+  background-image: url("../images/intro.jpg");
+  background-repeat: no-repeat;
+  height: 750px;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+.intro-label {
+  color: white;
+  font-size: 30px;
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 750px;
+  text-align: center;
+  vertical-align: middle;
+}
+.content {
+  width: 1170px;
+  padding: 15px;
+  margin: auto;
+}
+.prime-title {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 50px;
+}
+.card-picture {
+  background-image: url("../images/everest.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 270px;
+  background-position: center;
+  margin-bottom: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  position: relative;
+}
+.column {
+  margin-right: 20px;
+  width: 270px;
+  float: left;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-bottom: 20px;
+  background-color: white;
+}
+.column:nth-child(4n) {
+  margin-right: 0;
+}
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.subhead {
+  color: grey;
+  padding: 0 0 15px 15px;
+}
+.card-description {
+  padding: 0 15px 30px 15px;
+}
+.card-button {
+  text-transform: uppercase;
+  color: #4CAF50;
+  padding: 0 15px 30px 20px;
+  float: left;
+}
+.header-text {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 20px;
+}
+.button-load {
+  width: 130px;
+  height: 50px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #4CAF50;
+  padding: 10px;
+  margin: auto;
+}
+.wrapper-button-load {
+  text-align: center;
+}
+.page-bottom {
+  background-color: #212121;
+  margin-top: 50px;
+  padding: 50px 0 40px 0;
+}
+.footer-nav {
+  width: 1170px;
+  padding: 15px;
+  margin: auto;
+}
+.bottom-column {
+  width: 300px;
+  display: inline-block;
+  color: white;
+  padding-bottom: 15px;
+}
+.blog {
+  width: 600px;
+}
