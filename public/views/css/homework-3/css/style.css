@@ -22,7 +22,7 @@ a {
 * {
   box-sizing: border-box;
 }  
-header {
+.page-top {
   position: fixed;
   width: 100%;
   background-color: #3F51B5;
@@ -106,11 +106,9 @@ img {
   text-decoration: underline;
 }
 .page-num-active {
-  color: blue;
-  padding-right: 20px;
   text-decoration: none;
 }
-footer {
+.page-bottom {
   text-align: center;
   color: white;
   background-color: #3F51B5;
