@@ -27,26 +27,32 @@ a {
 body {
   background-image: url("../images/pattern.png");
 }
-.page-top {
+.header {
   box-shadow: 0 2px 5px rgba(0,0,0,.26);
   background-color: #4CAF50;
 }
 .menu {
   margin: auto; 
   width: 1170px;
-  padding: 20px 15px 20px 0;
+  padding: 20px 0 20px 0;
   text-transform: uppercase;
   color: white;
 }
-.login {
+.nav-right {
   text-transform: none;
   float: right;
 }
-.nav-page {
+.login-link {
   margin-right: 15px;
 }
-.login-page {
-  margin-right: 15px;
+.login-link:last-child {
+  margin-right: 0;
+}
+.nav-page {
+  margin-right: 10px;
+}
+.nav-page:last-child {
+  margin-right: 0;
 }
 .nav-page-active {
   padding-bottom: 17px;
@@ -79,7 +85,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: black;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .card-picture {
   background-image: url("../images/everest.jpg");
@@ -111,15 +117,15 @@ body {
 }
 .subhead {
   color: grey;
-  padding: 0 0 15px 15px;
+  margin: 0 0 15px 15px;
 }
 .card-description {
-  padding: 0 15px 30px 15px;
+  margin: 0 15px 30px 15px;
 }
-.card-button {
+.button {
   text-transform: uppercase;
   color: #4CAF50;
-  padding: 0 15px 30px 20px;
+  margin: 0 15px 30px 20px;
   float: left;
 }
 .header-text {
@@ -135,28 +141,39 @@ body {
   text-transform: uppercase;
   color: white;
   background-color: #4CAF50;
-  padding: 10px;
   margin: auto;
 }
 .wrapper-button-load {
   text-align: center;
 }
-.page-bottom {
+.footer {
   background-color: #212121;
   margin-top: 50px;
-  padding: 50px 0 40px 0;
+  padding: 20px 0 60px 0;
 }
-.footer-nav {
+.bottom-container {
   width: 1170px;
   padding: 15px;
   margin: auto;
 }
-.bottom-column {
-  width: 300px;
+.bottom-row {
+  float: left;
+  width: 285px;
   display: inline-block;
-  color: white;
-  padding-bottom: 15px;
 }
-.blog {
-  width: 600px;
+.bottom-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.bottom-column {
+  color: white;
+}
+.privacy-link {
+  display: block;
+  margin-bottom: 20px;
+}
+.terms-link {
+  margin-bottom: 20px;
+  display: block;
 }
