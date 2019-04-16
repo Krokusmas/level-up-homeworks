@@ -34,7 +34,10 @@ a {
 .menu {
   color: white;
   text-decoration: none;
-  padding-right: 15px;
+  margin-right: 15px;
+}
+.menu:last-child {
+  margin-right: 0;
 }
 .menu-active {
   text-decoration: underline;
@@ -65,7 +68,6 @@ img {
 }
 .card-image {
   position: relative;
-  padding-bottom: 25px;
 }
 .card-name {
   font-size: 30px;
@@ -103,8 +105,11 @@ img {
   text-align: center;
 }
 .page-num {
-  padding-right: 20px;
+  margin-right: 20px;
   text-decoration: underline;
+}
+.page-num:last-child {
+  margin-right: 0;
 }
 .page-num-active {
   text-decoration: none;
