@@ -140,16 +140,23 @@ body {
   text-transform: uppercase;
   color: #4CAF50;
   float: left;
-  background-color: white;
-  height: 50px;
   line-height: 50px;
   display: inline-block;
-  padding: 0 10px 30px;
+  vertical-align: top;
+  height: 50px;
+  background-color: white;
+  padding: 0 15px;
+  min-width: 40px;
+  border-radius: 3px;
+  margin-right: 5px;
 }
 .card-content:after {
   content: "";
   display: block;
   clear: both;
+}
+.button:last-child {
+  margin-right: 0;
 }
 .header-text {
   color: white;
@@ -172,26 +179,27 @@ body {
 .footer {
   background-color: #212121;
   margin-top: 50px;
-  padding: 20px 0 60px 0;
+  padding: 50px 0;
+  color: white;
 }
-.bottom-row {
+.footer-nav-item {
+  display: table;
+  margin-bottom: 16px;
+}
+.footer-nav:last-child {
+  margin-bottom: 0;
+}
+.footer-column {
   float: left;
-  width: 285px;
-  display: inline-block;
 }
-.bottom-row:after {
+.footer-row:after {
   content: "";
   display: block;
   clear: both;
 }
-.bottom-column {
-  color: white;
+.footer-column {
+  width: 25%;
+  outline: 1px solid red;
 }
-.privacy-link {
-  display: block;
-  margin-bottom: 20px;
-}
-.terms-link {
-  margin-bottom: 20px;
-  display: block;
-}
+
+
