@@ -20,7 +20,6 @@ a {
   border-top-right-radius: 3px; - for card image */
 
 /* Your styles go below */
-
 * {
   box-sizing: border-box;
 }
@@ -78,24 +77,21 @@ body {
 }
 .intro-label {
   color: white;
-  font-size: 30px;
   font-size: 100px;
   font-weight: bold;
   line-height: 750px;
   text-align: center;
   vertical-align: middle;
 }
-.content {
-  width: 1170px;
-  padding: 15px;
-  margin: auto;
-}
 .prime-title {
   font-size: 35px;
   text-transform: uppercase;
   font-weight: bold;
   color: black;
-  margin-bottom: 50px;
+  margin: 50px auto;
+  width: 100%;
+  padding: 0 15px;
+  width: 1170px;
 }
 .card-picture {
   background-image: url("../images/everest.jpg");
@@ -186,20 +182,15 @@ body {
   display: table;
   margin-bottom: 16px;
 }
-.footer-nav:last-child {
+.footer-nav-item:last-child {
   margin-bottom: 0;
 }
 .footer-column {
   float: left;
+  width: 25%;
 }
 .footer-row:after {
   content: "";
   display: block;
   clear: both;
 }
-.footer-column {
-  width: 25%;
-  outline: 1px solid red;
-}
-
-
