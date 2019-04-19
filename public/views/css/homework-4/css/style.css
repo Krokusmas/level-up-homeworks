@@ -70,7 +70,6 @@ body {
 .intro-block {
   background-image: url("../images/intro.jpg");
   background-repeat: no-repeat;
-  height: 700px;
   background-attachment: fixed;
   background-size: cover;
   margin-bottom: 50px;
@@ -106,6 +105,9 @@ body {
   background-color: white;
   border-radius: 3px;
 }
+.row {
+  margin: 0 -10px;
+}
 .column {
   width: 25%;
   padding: 0 10px;
@@ -118,16 +120,21 @@ body {
 }
 .card-content {
   padding: 15px;
+    font-size: 0;
+  
 }
 .card-subhead {
+  font-size: 16px;
   color: grey;
   margin-bottom: 20px;
 }
 .card-description {
+  font-size: 16px;
   margin-bottom: 20px;
   line-height: 1.45;
 }
 .button {
+  font-size: 16px;
   text-transform: uppercase;
   color: #4CAF50;
   line-height: 50px;
@@ -145,7 +152,7 @@ body {
 .card-action:last-child {
   margin-right: 0;
 }
-.card-header-text {
+.card-head {
   color: white;
   position: absolute;
   bottom: 20px;
@@ -160,37 +167,22 @@ body {
   text-transform: uppercase;
   color: white;
   background-color: #4CAF50;
-  margin: auto;
   border-radius: 3px;
 }
 .wrapper-button-load {
   text-align: center;
   margin-bottom: 40px;
+  margin: auto;
+}
+.content {
+  margin-bottom: 30px;
 }
 .footer {
   background-color: #212121;
   padding: 50px 0;
   color: white;
 }
-.footer-column {
-  margin-right: 10px;
-}
-.footer-column:last-child {
-  margin-right: 0;
-}
 .footer-nav-item {
   display: table;
   margin-bottom: 16px;
-}
-.footer-nav-item:last-child {
-  margin-bottom: 0;
-}
-.footer-column {
-  float: left;
-  width: 25%;
-}
-.footer-row:after {
-  content: "";
-  display: block;
-  clear: both;
 }
