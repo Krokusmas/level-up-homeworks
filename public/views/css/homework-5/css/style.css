@@ -18,43 +18,61 @@ body {
 /* border-radius: 3px; - card rounding */
 
 /* Your styles go below */
+
 .header {
   color: white;
-  background-color: #FFC107;
+  background-color: #607D8B;
   line-height: 60px;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
 }
 .footer {
   color: white;
-  background-color: #FFC107;
+  background-color: #607D8B;
   line-height: 60px;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
 }
+
 .container {
+  margin: 0 auto;
   padding: 0 15px;
   width: 100%;
   height: 1200px;
-  margin: 0 auto;
 }
-@media (min-width: 1024px) {
-  .container {
-  width: 1000px;
-  }
+.card-picture {
+  background-image: url("../images/everest.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 270px;
+  background-position: center;
+  margin-bottom: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  position: relative;
+}
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 3px;
 }
 .row {
-  margin: 0 -15px;
-  font-size: 0;
-}
-.pane {
-  height: 70px;
-  padding: 15px;
-  background-color: #FFE082;
+  margin: 0 -10px;
 }
 .column {
-  vertical-align: top;
-  display: inline-block;
-  padding: 0 15px;
   width: 100%;
+  padding: 0 15px;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+}
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 .sidebar {
   color: black;
@@ -69,6 +87,10 @@ body {
   margin-bottom: 20px;
   font-size: 18px;
 }
+.card-content {
+  padding: 15px;
+  font-size: 0;
+}
 .sidebar-label {
   font-weight: bold;
   padding: 0;
@@ -82,24 +104,13 @@ body {
   margin-bottom: 20px;
   line-height: 16px;
 }
-.card {
-  background-color: #DDDDDD;
-  height: 200px;
-  font-weight: bold;
-  line-height: 200px;
-  font-size: 60px;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-}
-.col-xs-1 {
+/*.col-xs-1 {
   width: 50%;
 }
 .col-xs-2 {
   width: 100%;
-}
-@media (min-width: 540px) {
+}*/
+@media (min-width: 544px) {
   .col-sm-1 {
     width: 50%;
   }
@@ -107,7 +118,7 @@ body {
     width: 100%;
   }
 }
-@media (min-width: 765px) {
+/*@media (min-width: 765px) {
   .col-md-1 {
     width: 25%;
   }
@@ -120,4 +131,45 @@ body {
   .col-md-4 {
     width: 100%;
   }
+}*/
+.card-subhead {
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 20px;
 }
+.card-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+.button {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #4CAF50;
+  line-height: 50px;
+  display: inline-block;
+  vertical-align: top;
+  height: 50px;
+  background-color: white;
+  padding: 0 15px;
+  min-width: 40px;
+  border-radius: 3px;
+}
+.card-action {
+  margin-right: 5px;
+} 
+.card-action:last-child {
+  margin-right: 0;
+}
+.card-head {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 20px;
+}
+
+.content {
+  margin-bottom: 30px;
+}
+
