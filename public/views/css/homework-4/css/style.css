@@ -120,17 +120,17 @@ body {
 }
 .card-content {
   padding: 15px;
-  font-size: 0;
 }
 .card-subhead {
-  font-size: 16px;
   color: grey;
   margin-bottom: 20px;
 }
 .card-description {
-  font-size: 16px;
   margin-bottom: 20px;
   line-height: 1.45;
+}
+.button-block {
+  font-size: 0;
 }
 .button {
   font-size: 16px;
@@ -159,22 +159,22 @@ body {
   font-size: 20px;
 }
 .button-load {
-  width: 130px;
   height: 50px;
+  padding: 0 15px;
   min-width: 50px;
   font-size: 16px;
   text-transform: uppercase;
   color: white;
   background-color: #4CAF50;
   border-radius: 3px;
+  display: inline-block;
 }
 .wrapper-button-load {
   text-align: center;
-  margin-bottom: 40px;
   margin: auto;
 }
 .content {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .footer {
   background-color: #212121;
@@ -184,4 +184,7 @@ body {
 .footer-nav-item {
   display: table;
   margin-bottom: 16px;
+}
+.footer-nav-item:last-child {
+  margin-bottom: 0;
 }
