@@ -98,6 +98,7 @@ body {
   line-height: 20px;
   padding-left: 30px;
   font-weight: 20px;
+  cursor: pointer;
 }
 .checkbox-name:before {
   content: "";
@@ -108,10 +109,11 @@ body {
   top: 0;
   left: 0;
   border-radius: 3px;
+  background-color: white;
 }
-.checkbox-active:before {
+.checkbox-input:checked + .checkbox-name:before {
+  border-color: blue;
   background-color: blue;
-  border: 2px solid blue;
 }
 .checkbox-input:checked + .checkbox-name:after {
   content: "";
@@ -119,6 +121,7 @@ body {
   height: 12px;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
+
   transform: rotate(45deg);
   position: absolute;
   top: 4px;
