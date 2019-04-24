@@ -74,7 +74,7 @@ body {
 .checkbox {
   margin-bottom: 15px;
 }
-.sidebar-header {
+.sidebar-head {
   margin-bottom: 30px;
   font-size: 18px;
 }
@@ -295,7 +295,7 @@ body {
   margin-bottom: 20px;
   line-height: 1.45;
 }
-.button-wrapper {
+.card-actions {
   font-size: 0;
 }
 .button {
@@ -312,10 +312,10 @@ body {
   border-radius: 3px;
   text-decoration: none;
 }
-.button-action {
+.card-action {
   margin-right: 5px;
 } 
-.button-action:last-child {
+.card-action:last-child {
   margin-right: 0;
 }
 .card-head {
