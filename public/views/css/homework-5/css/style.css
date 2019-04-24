@@ -59,7 +59,6 @@ body {
   width: 100%;
   padding: 0 15px;
   float: left;
-  vertical-align: top;
 }
 .row:after {
   content: "";
@@ -75,7 +74,7 @@ body {
 .checkbox {
   margin-bottom: 15px;
 }
-.sidebar-label {
+.sidebar-header {
   margin-bottom: 30px;
   font-size: 18px;
 }
@@ -119,12 +118,6 @@ body {
 .card-content {
   padding: 15px;
 }
-.col-xs-1 {
-  width: 50%;
-}
-.col-xs-2 {
-  width: 100%;
-}
 @media (min-width: 544px) {
   .container {
     width: 520px;
@@ -137,7 +130,7 @@ body {
 }
 @media (min-width: 1024px) {
   .container {
-    width: 1020px;
+    width: 1000px;
   }
 }
 @media (min-width: 544px) {
@@ -314,15 +307,15 @@ body {
   vertical-align: top;
   height: 50px;
   background-color: white;
-  padding: 0 15px;
+  padding: 0 10px;
   min-width: 40px;
   border-radius: 3px;
   text-decoration: none;
 }
-.card-action {
+.button-action {
   margin-right: 5px;
 } 
-.card-action:last-child {
+.button-action:last-child {
   margin-right: 0;
 }
 .card-head {
