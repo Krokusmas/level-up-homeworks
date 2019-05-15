@@ -43,8 +43,7 @@ table {
   border-spacing: 0;
   border: 1px solid rgba(204, 204, 204);
   width: 800px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   box-shadow: 4px 4px 4px grey;
 }
 td {
@@ -75,21 +74,17 @@ td:last-child {
 .status-error {
   background-color: red;
 }
-.sprite-item-1 {
+.table-icon {
   width: 36px;
   height: 36px;
   background-image: url("../images/sprite.png");
+}
+.sprite-item-1 {
   background-position: -410px -190px;
 }
 .sprite-item-2 {
-  width: 36px;
-  height: 36px;
-  background-image: url("../images/sprite.png");
   background-position: -156px -126px;
 }
 .sprite-item-3 {
-  width: 36px;
-  height: 36px;
-  background-image: url("../images/sprite.png");
   background-position: -60px -93px;
 }
