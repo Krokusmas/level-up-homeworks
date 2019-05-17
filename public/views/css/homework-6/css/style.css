@@ -13,7 +13,6 @@ body {
   padding-top: 25px;
 }
 .container {
-  margin: 0 auto;
   width: 100%;
 }
 .circle {
@@ -54,8 +53,13 @@ td:last-child {
 .status {
   border-radius: 4px;
   color: white;
-  padding: 10px 15px;
+  padding: 0 15px;
   line-height: 2;
+  display: inline-block;
+}
+.status-cell {
+  display: inline-block;
+  float: right;
 }
 .status-approved {
   background-color: green;
@@ -71,12 +75,12 @@ td:last-child {
   height: 36px;
   background-image: url("../images/sprite.png");
 }
-.table-item-approved {
+.table-icon-approved {
   background-position: -410px -190px;
 }
-.table-item-pending {
+.table-icon-pending {
   background-position: -156px -126px;
 }
-.table-item-error {
+.table-icon-error {
   background-position: -60px -93px;
 }
