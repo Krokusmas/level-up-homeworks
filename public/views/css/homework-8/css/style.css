@@ -8,75 +8,107 @@ html {
 .content {
   padding-top: 25px;
 }
-.preloader {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
-.preloader-inner {
-  width: 100%;
-  height: 100%;
+.loader {
+  margin: 150px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background-image: radial-gradient(circle, rgba(110,110,110,1), rgba(73,73,73,1));
-
-
+  position: relative;
+  background: radial-gradient(50% 50%, #6B6B6B, #4A4A4A);
+  font-size: 50px;
+  font-family: "Times New Roman";
+  color: white;
+  font-weight: bold;
 }
-
-.preloader-half {
+.loader:after {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: -25px;
+  animation: number 10s forwards linear;
+}
+@keyframes number {
+  from {
+    content: "1";
+  }
+    11.111% {
+    content: "2";
+  }
+    22.222% {
+    content: "3";
+  }
+    33.333% {
+    content: "4";
+  }
+    44.444% {
+    content: "5";
+  }
+    55.555% {
+    content: "6";
+  }
+    66.666% {
+    content: "7";
+  }
+    77.777% {
+    content: "8";
+  }
+    88.888% {
+    content: "9";
+  }
+    100% {
+    content: "10";
+  }
+}
+.loader-half {
   width: 50%;
   height: 100%;
   overflow: hidden;
   position: absolute;
   top: 0;
+  left: 0;
 }
-.preloader-half-right {
-  border-left-color: transparent;
-  border-bottom-color: transparent;
+.loader-half-right {
   right: 0;
-  transform: rotate(-129deg);
-  animation: rotate-right 5s;
+  left: auto;
 }
-.preloader-circle {
+.loader-indicator {
   width: 200%;
   height: 100%;
   border-radius: 50%;
   border: 15px solid blue;
+  border-bottom-color: transparent;
   position: absolute;
   top: 0;
-}
-.preloader-circle-left {
-  border-right-color: transparent;
-  border-bottom-color: transparent;
   left: 0;
-  transform: rotate(129deg);
 }
-.preloader-circle-right {
+.loader-indicator-left {
+  border-right-color: transparent;
+  transform: rotate(-225deg);
+  animation: rotate-left-side 5s 5s linear forwards;
+}
+.loader-indicator-right {
   border-left-color: transparent;
-  border-bottom-color: transparent;
   right: 0;
-  transform: rotate(-129deg);
-  animation: rotate-right 5s;
+  left: auto;
+  transform: rotate(-135deg);
+  animation: rotate-right-side 5s linear forwards;
 }
 
-/*  animation-name: loader;
-  animation-duration: 5s;
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards;*/
-
-
-@keyframes rotate-right {
+@keyframes rotate-right-side {
   from {
-    transform: rotate(0);
+    transform: rotate(-135deg);
   }
   to {
-    transform: rotate(-129deg);
+    transform: rotate(45deg);
   }
 }
-@keyframes rotate-left {
+@keyframes rotate-left-side {
   from {
-    transform: rotate(129deg);
+    transform: rotate(-225deg);
   }
   to {
-    transform: rotate(0);
+    transform: rotate(-45deg);
   }
 }
