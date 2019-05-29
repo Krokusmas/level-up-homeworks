@@ -58,7 +58,6 @@ td:last-child {
   display: inline-block;
 }
 .status-cell {
-  display: inline-block;
   float: right;
 }
 .status-approved {
