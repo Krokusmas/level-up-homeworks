@@ -21,40 +21,42 @@ html {
   font-weight: bold;
 }
 .loader:after {
-  content: "1";
+  content: "0";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%);
-  margin-top: -25px;
+  transform: translate(-50%, -50%);
   animation: number 10s forwards linear;
 }
 @keyframes number {
   from {
+    content: "0";
+  }
+  10% {
     content: "1";
   }
-  11.111% {
-      content: "2";
+  20% {
+    content: "2";
   }
-  22.222% {
-      content: "3";
+  30% {
+    content: "3";
   }
-  33.333% {
-      content: "4";
+  40% {
+    content: "4";
   }
-  44.444% {
+  50% {
     content: "5";
   }
-  55.555% {
+  60% {
     content: "6";
   }
-  66.666% {
+  70% {
     content: "7";
   }
-  77.777% {
+  80% {
     content: "8";
   }
-  88.888% {
+  90% {
     content: "9";
   }
   100% {
