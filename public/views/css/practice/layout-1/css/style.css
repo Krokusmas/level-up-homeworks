@@ -6,17 +6,34 @@ html {
   font-size: 16px;
 }
 .wrapper {
-  min-height: 700px;
+  min-height: 800px;
   height: 1px;
 }
 .container {
   height: 100%;
+  padding: 120px 60px;
+  margin: 0 auto;
+  background-color: rgba(58, 9, 41, 1);
   background-image: linear-gradient(
     to right,
-    rgba(80, 11, 56, 1), rgba(58, 9, 41, 1)
+    rgba(240, 240, 240, 0.1), rgba(0, 0, 0, 0.1)
     ),
   repeating-linear-gradient(
   to right,
   rgba(97, 21, 68, 0), rgba(97, 21, 68, 0) 20%,
   rgba(97, 21, 68, 0.1) 20%, rgba(97, 21, 68, 0.1) 20.2%);
+}
+.content {
+  height: 100%;
+  
+}
+.main-block {
+  height: 100%;
+  background-image: url('../images/blow.png');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size:cover;
+  
+  outline: 2px solid blue;
+  border-radius: 10px; 
 }
