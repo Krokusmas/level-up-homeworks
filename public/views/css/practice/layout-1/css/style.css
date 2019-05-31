@@ -1,0 +1,22 @@
+*, :before, :after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.wrapper {
+  min-height: 700px;
+  height: 1px;
+}
+.container {
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(80, 11, 56, 1), rgba(58, 9, 41, 1)
+    ),
+  repeating-linear-gradient(
+  to right,
+  rgba(97, 21, 68, 0), rgba(97, 21, 68, 0) 20%,
+  rgba(97, 21, 68, 0.1) 20%, rgba(97, 21, 68, 0.1) 20.2%);
+}
