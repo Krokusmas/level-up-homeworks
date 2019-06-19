@@ -1,21 +1,22 @@
-"use strict"
-//  1. Объявите две переменные: admin и name.
-// Запишите в name строку "Василий".
-// 2. Скопируйте значение из name в admin.
-// Выведите admin (должно вывести «Василий»).
+'use strict';
+
+// Unit link - https://learn.javascript.ru/variables#tasks
+
+// Task 1
 var admin;
 var name;
-var name = "Василий";
+var name = 'Василий';
 var admin = name;
-alert(admin);
-// 1. Создайте переменную для названия нашей планеты и присвойте ей значение "Земля". Правильное имя выберите сами.
-// 2. Создайте переменную для имени посетителя со значением "Петя". Имя также на ваш вкус.
-var ourPlanetName;
-var ourPlanetName = "Земля";
-var username;
-var username = "Петя";
-// Придумать названия переменных для следующего: количество кадров в секунду; соеденительный знак между словами; режим просмотра документа; необходимость показа последней страницы постраничной навигации.
+console.log(admin);
+
+// Unit link - https://learn.javascript.ru/variable-names#tasks
+
+//  Task 1
+var ourPlanetName = 'Земля';
+var username = 'Петя';
+
+// Additional task 1
 var fps;
-var hyphen;
+var connectingSign;
 var documentViewMode;
-var lastNavPageViewNecessary;
+var showLastNavPage;
