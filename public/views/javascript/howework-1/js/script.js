@@ -13,7 +13,7 @@ console.log(admin);
 
 //  Task 1
 var ourPlanetName = 'Земля';
-var username = 'Петя';
+var userName = 'Петя';
 
 // Additional task 1
 var fps;
