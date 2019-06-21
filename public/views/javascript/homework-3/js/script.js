@@ -3,20 +3,22 @@
 
 // Task 1
 if ("0") {
-  alert( 'Привет' );   // Выведется ли alert? Да, т.к. строка - это true
-}  
+  alert( 'Привет' );
+}  // Выведется ли alert? Да, т.к. непустая строка - это true  
 
 
 // Task 2
-var officialNameJs = prompt ('Каково «официальное» название JavaScript?', '');
+var officialNameJs;
+officialNameJs = prompt ('Каково «официальное» название JavaScript?', '');
 if (officialNameJs === 'EcmaScript') {
   console.log('Верно!');
 } else {
-    console.log('Не знаете? «ECMAScript»!');
+  console.log('Не знаете? «ECMAScript»!');
 }
 
 // Task 3
-var temperature = prompt ('Сколько градусов по Цельсию в твоём холодильнике?', '');
+var temperature;
+temperature = prompt ('Сколько градусов по Цельсию в твоём холодильнике?', '');
 if (temperature > 0) {
   console.log(1);
 } else if (temperature < 0) {
@@ -26,16 +28,18 @@ if (temperature > 0) {
 }
 
 // Task 4
-var userName = prompt ('Кто пришёл?', '');
+var userName;
+var password;
+userName = prompt ('Кто пришёл?', '');
 if (userName === 'Админ') {
-  var password = prompt ('Пароль?', '');
-    if (password === 'Черный Властелин') {
-      console.log('Добро пожаловать!');
-    } else if (password === null) {
-      console.log('Вход отменен');
-    } else {
-      console.log('пароль неверен');
-    }
+  password = prompt ('Пароль?', '');
+if (password === 'Черный Властелин') {
+  console.log('Добро пожаловать!');
+  } else if (password === null) {
+    console.log('Вход отменен');
+  } else {
+    console.log('пароль неверен');
+  }
 } else if (userName === null) {
   console.log('Вход отменен');
 } else { 
@@ -46,9 +50,8 @@ if (userName === 'Админ') {
 result = (a + b < 4) ? 'Мало' : 'Много';
 
 // Task 6
-var message = (login === 'Вася') ? 'Привет' :
-(login === 'Директор') ? 'Здравствуйте' :
-(login === '') ? 'Нет логина' : '';
+var message;
+message = (login === 'Вася') ? 'Привет' : (login === 'Директор') ? 'Здравствуйте' : (login === '') ? 'Нет логина' : '';
 
 // Unit link https://learn.javascript.ru/logical-ops
 
