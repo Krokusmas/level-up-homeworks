@@ -15,16 +15,23 @@
 // От 0 до 4 в обоих случаях т.к. инструкция alert будет выполняться сразу если условие верно и только после этого переменная будет увеличена в обоих случаях.
 
 // Task 4
-var i = 0;
-while (i < 3) {
-  alert( "номер " + i + "!" );
-  i++;
+for (var i = 2; i <= 10; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
 }
 
 // Task 5
+var i = 0;
+while (i < 3) {
+  console.log('номер ' + i + '!');
+  i++;
+}
+
+// Task 6
 var num;
 while (true) {
-  num = prompt ('Введите число больше 100', '');
+  num = prompt('Введите число больше 100', '');
   if (num > 100) {
     break;
   } else if (!num) {
@@ -32,7 +39,12 @@ while (true) {
   }
 } 
 
-// Task 6
+// Второй вариант через do..while
+do {
+  var num = prompt('Введите число больше 100', '');
+} while (i <= 100);
+
+// Task 7
 nextPrime:
 for (var i = 2; i <= 10; i++) {
   for (var j = 2; j < i; j++) {
@@ -48,72 +60,79 @@ var browser = 'Chrome';
 if (browser === 'IE') {
   console.log('О, да у вас IE!');
 } else if (browser === 'Chrome') {
-console.log('Да, и эти браузеры мы поддерживаем');
+  console.log('Да, и эти браузеры мы поддерживаем');
 } else if (browser === 'Firefox') {
-console.log('Да, и эти браузеры мы поддерживаем');
+  console.log('Да, и эти браузеры мы поддерживаем');
 } else if (browser === 'Firefox') {
-console.log('Да, и эти браузеры мы поддерживаем');
+  console.log('Да, и эти браузеры мы поддерживаем');
 } else if (browser === 'Safari') {
-console.log('Да, и эти браузеры мы поддерживаем');
+  console.log('Да, и эти браузеры мы поддерживаем');
 } else if (browser === 'Opera') {
-console.log('Да, и эти браузеры мы поддерживаем');
+  console.log('Да, и эти браузеры мы поддерживаем');
 } else { 
-console.log('Мы надеемся, что и в вашем браузере все ок!');
+  console.log('Мы надеемся, что и в вашем браузере все ок!');
 }
 
 // Task 2
 var a = +prompt('a?', '');
-
-switch(a) {
-  case 0:
+switch (a) {
+  case 0: {
     console.log(0);
+
     break;
-  case 1:
+  } 
+  case 1: {
     console.log(1);
-    break;
+    break; 
+  }
+
   case 2:
-  case 3:
+  case 3: {
     console.log('2,3');
+
+    break;
+  }
 }
 
 // Unit link https://learn.javascript.ru/function-basics
 
 // Task 1
-// Оба варианта работают одинаково.
+// Оба варианта работают одинаково потому что во втором варианте при значении age <= 18 код функции продолжит выполняться и функция возвратит значение согласно команде return confirm('Родители разрешили?');
 
 // Task 2
 // Вариант с '?'
-function checkAge(age) {
-  return (age > 18) ? true : confirm('Родители разрешили?');
-}
+// function checkAge (age) {
+//   return (age > 18) ? true : confirm('Родители разрешили?');
+// }
 
 // Вариант с ||
-function checkAge(age) {
-  return (age > 18) || confirm('Родители разрешили?');
-}
+// function checkAge (age) {
+//   return (age > 18) || confirm('Родители разрешили?');
+// }
 
 // Task 3
-function min(a, b) {
-  if (a < b) {
-    console.log(a);
-    return;
-  } else {
-    console.log(b);
-    return;
-  } 
-}
-var a = prompt('Введите а', '');
-var b = prompt('Введите b', '');
-min(a, b);
+// function min (a, b) {
+//   if (a < b) {
+//     console.log(a);
+//     return a;
+//   } else {
+//     console.log(b);
+//     return b;
+//   }
+// }
+// var a = +prompt('Введите а', '');
+// var b = +prompt('Введите b', '');
+// min(a, b);
 
 // Task 4
-function pow(x, n) {
+function pow (x, n) {
   var j = x;
   var i;
   for (i = 1; i < n; i++) {
     x = x * j;
   }
   console.log(x);
+  return x;
 } 
 var x = +prompt('Введите число', '');
 var n = +prompt('Введите степень', '');
@@ -121,5 +140,5 @@ var n = +prompt('Введите степень', '');
 if (n < 1) {
   console.log('Неверный формат. Введите число > 1');
 } else { 
-  pow(x, n);
+  pow (x, n);
 }
