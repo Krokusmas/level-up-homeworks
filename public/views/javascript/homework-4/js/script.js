@@ -119,7 +119,6 @@ function pow (x, n) {
   for (i = 1; i < n; i += 1) {
     result *= x;
   }
-  console.log(result);
   return result;
 }
 var x = +prompt('Введите число', '');
