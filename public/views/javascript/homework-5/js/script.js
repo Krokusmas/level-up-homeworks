@@ -6,8 +6,7 @@
 // function sum (n) {
 //   var result = n;
 //   var i;
-//   var n;
-//   for (i = n - 1; i !== 0; i -= 1) {
+//   for (i = n - 1; i > 0; i -= 1) {
 //     result += i;
 //   } 
 //   return result;
@@ -17,50 +16,49 @@
 // Через рекурсию
 // function sumTo (n) {
 //   if (n > 1) {
-//     return n + sumTo (n - 1);
+//     return n + sumTo(n - 1);
 //   } else {
 //     return n;
 //   }
 // }
-// console.log(sumTo (100));
+// console.log(sumTo(100));
 
 // С использованием формулы для суммы арифметической прогрессии.
 // function sumTo (n) {
-//   var sum = n * (n + 1) / 2;
-//   return sum;
+//   return n * (n + 1) / 2;
 // }
-// console.log(sumTo (100)); 
+// console.log(sumTo(100)); 
 
 // 1. Самый быстрый способ решения данного примера - это через формулу для суммы арифмитической прогрессии, поскольку программа при расчете выполнить всего 3 арифметических операции.
 // 2. Наиболее долго будет работать второй вариант через рекурсию, т.к. программа создает стек контекстов для каждого вызова и неоконченные контексты хранятся в памяти.
 // 3. sumTo(100000) при помощи рекурсии посчитать нельзя, т.к. большинством браузеров ограничена глубина рекурсии до 10,000.
 
 // Task 2
-// function fuctorial (n) {
+// function factorial (n) {
 //   var i = 1;
 //   if (n - i > 1) {
-//     return n * fuctorial (n - i);
-//     i += 1;
+//     return n * factorial(n - i);
 //   } else {
 //     return n;
 //   }
 // }
-// console.log(fuctorial (3));
+// console.log(factorial(4));
 
 // Task 3
-// Не доделал
-// function fib (n) {
-//   var i = 0;
-//   var sum = 1;
-//   if (i <= n) {
-//     return sum + fib (sum + i);
-//     i += 1;
-//   } else {
-//     return sum;
-//   }
-// }
+function fib (n) {
+  var i;
+  var nextNum = 1;
+  var prevNum = 1;
+  for (i = 1; n > 0; n - i) {
+    return fib(nextNum + prevNum);
+    nextNum = nextNum + prevNum;
+    prevNum = nextNum - (nextNum - prevNum);
+  } else {
+    return n;
+  }
+}
 
-// console.log(fib (3)); // 2
+console.log(fib(3)); // 2
 // console.log(fib(7)); // 13
 // console.log(fib(77)); // 5527939700884757
 
