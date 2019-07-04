@@ -45,20 +45,19 @@
 // console.log(factorial(4));
 
 // Task 3
-function fib (n) {
-  var i;
-  var nextNum = 1;
-  var prevNum = 1;
-  for (i = 1; n > 0; n - i) {
-    return fib(nextNum + prevNum);
-    nextNum = nextNum + prevNum;
-    prevNum = nextNum - (nextNum - prevNum);
-  } else {
-    return n;
-  }
+var a = 1;
+var b = 1;
+var c;
+var n = 7;
+var i = n;
+while (i > 2) {
+  c = a + b;
+  a = b;
+  b = c;
+  i -= 1;
 }
-
-console.log(fib(3)); // 2
+console.log(c);
+// console.log(c); // 2
 // console.log(fib(7)); // 13
 // console.log(fib(77)); // 5527939700884757
 
