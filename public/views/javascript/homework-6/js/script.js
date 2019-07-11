@@ -6,9 +6,10 @@
 //   return !isNaN(parseFloat(n)) && isFinite(n);
 // }
 
+// var b;
 // var a = +prompt('Введите первое число', '');
 // if (!isNaN(a)) {
-//   var b = +prompt('Введите второе число', '');
+//   b = +prompt('Введите второе число', '');
 // } if (!isNaN(b)) {
 //   console.log(a + b);
 // } else {
@@ -51,37 +52,40 @@
 
 // Task 6
 // var max = 10;
-// console.log(Math.random() * max); //Логику выражения понял, но не совсем понял другие примеры с методом рандомных чисел.
+// console.log(Math.random() * max);
 
 // Task 7
 // var min = 5;
 // var max = 10;
-// console.log(min + Math.random() * (max - min)); //Не понял почему именно так это работает.
+// console.log(min + Math.random() * (max - min));
 
 // Task 8
-// То же самое.
+// function randomInteger (min, max) {
+//   return ((min + Math.random() * (max + 1 - min)).toFixed(0));
+// }
+// var min = +prompt('Введите min', '');
+// var max = +prompt('Введите min', '');
+// console.log(randomInteger(min, max));
 
 // Unit link https://learn.javascript.ru/string
 
 // Task 1
 // var str = '';
 // function ucFirst (str) {
-//   return ((str.charAt(0).toUpperCase(0)) + str.slice(1));
+//   return (str.charAt(0).toUpperCase(0)) + str.slice(1);
 // }
 // console.log(ucFirst(str));
 
 // Task 2
-// var pos = -1;
 // function checkSpam (str) {
-//   var foundSpam = str.toLowerCase();
-//   if (~foundSpam.indexOf('viagra', pos + 1)) {
+//   var strLowerCase = str.toLowerCase();
+//   if (~strLowerCase.indexOf('viagra')) {
 //     return true;
 //   } 
-//   if (~foundSpam.indexOf('xxx', pos + 1)) {
+//   if (~strLowerCase.indexOf('xxx')) {
 //     return true;
-//   } else {
-//     return false;
-//   }
+//   } 
+//   return false;
 // }
 // console.log(checkSpam('buy ViAgRA now'));
 // console.log(checkSpam('free xxxxx'));
@@ -89,27 +93,21 @@
 
 // Task 3
 // function truncate (str, maxlength) {
-//   let dots = '...'
 //   let result = '';
-//   let strLength = (str.length);
-//   if (strLength > maxlength) {
-//     for (let i = 0; i < maxlength - 3; i += 1) {
-//       result += str[i];
-//     }
-//     return result + dots;
-//   } else {
-//     return str;
+//   let strLen = str.length;
+//   if (strLen > maxlength) {
+//     result = str.slice(0, maxlength);
+//     return result + '...';
 //   }
+//   return str;
 // }
 // console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20));
 // console.log(truncate("Всем привет!", 20));
 
 // Task 4
 // function extractCurrencyValue (str) {
-//   let result = '';
-//   for (let i = 1; i < str.length; i += 1) {
-//     result += str[i];
-//   }
+//   let result;
+//   result = str.slice(1);
 //   return +result;
 // }
 // console.log(extractCurrencyValue('$120'));
@@ -123,3 +121,26 @@
 // console.log(funcName('abc^de^^fg^hij', '^', '1594', ':')); // output - 'abc1de59fg4hij'
 // console.log(funcName('abc^de^^fg^hij', '^', '22', ':')); // output - 'abc2de2:fg:hij'
 // console.log(funcName('abcde^fghij', '^', '0123', ':')); // output - 'abcde0fghij'
+
+// function replaceChar (str, pattern, num, char) {
+//   let i = 0;
+//   let n = 0;
+//   let result = '';
+//   for (i = 0; i <= str.length; i += 1) {
+//     if (str[i] !== pattern) {
+//     result += str[i];
+//     } else {
+//       if (n <= num.length) {
+//       result += num[n];
+//       n += 1;  
+//       } else {
+//         result += char;
+//       }
+//     }
+//   }
+//   return result;
+// }
+// console.log(replaceChar('abc^de^^fg^hij', '^', '1594', ':')); // output - 'abc1de59fg4hij'
+// console.log(replaceChar('abc^de^^fg^hij', '^', '22', ':')); // output - 'abc2de2:fg:hij'
+// console.log(replaceChar('abcde^fghij', '^', '0123', ':')); // output - 'abcde0fghij'
+
