@@ -96,7 +96,7 @@
 //   let result = '';
 //   let strLen = str.length;
 //   if (strLen > maxlength) {
-//     result = str.slice(0, maxlength);
+//     result = str.slice(0, maxlength - 1);
 //     return result + '...';
 //   }
 //   return str;
@@ -107,8 +107,7 @@
 // Task 4
 // function extractCurrencyValue (str) {
 //   let result;
-//   result = str.slice(1);
-//   return +result;
+//   return result = +str.slice(1);
 // }
 // console.log(extractCurrencyValue('$120'));
 
@@ -126,15 +125,17 @@
 //   let i = 0;
 //   let n = 0;
 //   let result = '';
-//   for (i = 0; i <= str.length; i += 1) {
+//   for (i; i < str.length; i += 1) {
 //     if (str[i] !== pattern) {
-//     result += str[i];
+//       result += str[i];
 //     } else {
-//       if (n <= num.length) {
-//       result += num[n];
-//       n += 1;  
+//       if (n < num.length) { 
+//         result += num[n]; 
+//         n += 1;
 //       } else {
-//         result += char;
+//         if (n === num.length) {
+//           result += char;
+//         }
 //       }
 //     }
 //   }
@@ -143,4 +144,3 @@
 // console.log(replaceChar('abc^de^^fg^hij', '^', '1594', ':')); // output - 'abc1de59fg4hij'
 // console.log(replaceChar('abc^de^^fg^hij', '^', '22', ':')); // output - 'abc2de2:fg:hij'
 // console.log(replaceChar('abcde^fghij', '^', '0123', ':')); // output - 'abcde0fghij'
-
