@@ -201,12 +201,27 @@
 
 // // Draw an area
 // // Draw an area N wide and N height like it the example below. Use ' @ ' and ' - '.
-// (function () {
-//   function funcName (N) {
-//     // code...
+
+// function arena (n) {
+//   var str = '';
+//   for (let i = 1; i <= n; i += 1) {
+//     str = i + ' @ ';
+//     if ((i === 1) || (i === n)) {
+//       for (let i = 1; i < n; i += 1) {
+//         str += ' @ '; 
+//       }
+//       console.log(str);
+//     } else {
+//       for (let i = 2; i < n; i += 1) {
+//         str += ' - ';
+//       }
+//       str += ' @ ';
+//       console.log(str);
+//     }
 //   }
-//   funcName(8); // -> http://prntscr.com/jpobhn
-// }());
+// }
+
+// console.log(arena(8));
 
 // // Strings comparison
 // // Check whether two strings have the same set of chars. Return true if they are equal length and have the same set of chars no matter at which index those chars are
