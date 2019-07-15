@@ -96,7 +96,7 @@
 //   let result = '';
 //   let strLen = str.length;
 //   if (strLen > maxlength) {
-//     result = str.slice(0, maxlength - 1);
+//     result = str.slice(0, maxlength - 3);
 //     return result + '...';
 //   }
 //   return str;
@@ -106,8 +106,7 @@
 
 // Task 4
 // function extractCurrencyValue (str) {
-//   let result;
-//   return result = +str.slice(1);
+//   return +str.slice(1);
 // }
 // console.log(extractCurrencyValue('$120'));
 
