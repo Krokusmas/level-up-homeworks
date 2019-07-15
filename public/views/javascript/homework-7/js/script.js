@@ -225,11 +225,23 @@
 
 // // Strings comparison
 // // Check whether two strings have the same set of chars. Return true if they are equal length and have the same set of chars no matter at which index those chars are
-// (function () {
-//   function funcName (param1, param2) {
-//     // code...
+
+// function strCompare (str1, str2) {
+//   let i;
+//   let result;
+//   let pos;
+//   if (str1.length !== str2.length) {
+//     return false; 
 //   }
-//   funcName('clock', 'lockc'); // -> true. Because two "c", one "l", one "o" and one "k". Doesn't matter they are at different positions
-//   funcName('tree', 'three'); // -> false. Different lenghts
-//   funcName('mttudd', 'dutmtd'); // -> true. Because two "t", two "d", one "m" and one "u". Doesn't matter they are at different positions
-// }());
+//   for (i = 0; i < str1.length; i += 1) {
+//     while ((result = str2.indexOf(str1[i], pos + 1)) != -1) {
+//       return true;
+//     }
+//     false;
+//   }
+// }
+
+// console.log(strCompare('clock', 'lockc')); // -> true. Because two "c", one "l", one "o" and one "k". Doesn't matter they are at different positions
+// console.log(strCompare('tree', 'three')); // -> false. Different lenghts
+// console.log(strCompare('mttudd', 'dutmtd')); // -> true. Because two "t", two "d", one "m" and one "u". Doesn't matter they are at different positions
+// }
