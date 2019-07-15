@@ -99,50 +99,105 @@
 // ADDITIONAL TASKS
 // Reverse the given string
 // (function () {
-//   function funcName (param) {
-//     // code...
+//   function strReverse (str) {
+//   let result = '';
+//   let n = str.length - 1;
+//   while (n >= 0) {
+//     result += str[n];
+//     n -= 1;  
 //   }
-//   funcName('Some string'); // -> 'gnirts emoS'
+//   return result;
+// }
 // }());
-
-var result = '';
-var i;
-
-  function strReverse (str) {
-    let n = str.length;
-    for (i = 0; i < str.length; i += 1) {
-      result += str[n];
-      n -= 1; 
-    }
-    return result;
-  }
-  strReverse('Some string');
-
-
 
 // Compare two objects
 // This function must return true if two objects refer to the same object or they refer to different objects but have the same keys number and their corresponding values are equal. The function must work with unlimited nestend objects. You can use "book" object with different set of properties to test.
-// (function () {
-//   function funcName (param1, param2) {
-//     // code...
+// let obj1 = {
+//   name: '1984',
+//   pages: 300,
+//   cover: 'Hard',
+//   price: 240,
+//   hasIllustrations: true,
+//   author: {
+//     name: 'George Orwell',
+//     dob: 'Jun 25 1903',
+//     size: {
+//       w: 10,
+//       h: 11,
+//       sdfl: 13
+//     }
 //   }
-//   funcName(
-//     { key: 'Value' },
-//     { key: 'Value' }
-//   ); // -> true
-//   funcName(
-//     { key: 'Value' },
-//     { key: 'Value 1' }
-//   ); // -> false
-//   funcName(
-//     { key: 'Value', nested: { key: 'Value' } },
-//     { key: 'Value', nested: { key: 'Value' } }
-//   ); // -> true
-//   funcName(
-//     { key: 'Value', nested: { key: 'Value' } },
-//     { key: 'Value 1', nested: { key: 'Value' } }
-//   ); // -> false
-// }());
+// };
+// let obj2 = {
+//   name: '1984',
+//   pages: 300,
+//   cover: 'Hard',
+//   price: 240,
+//   hasIllustrations: true,
+//   author: {
+//     // name: 'George Orwell',
+//     dob: 'Jun 25 1903',
+//     size: {
+//       w: 10,
+//       h: 11,
+//       sdfl: 13
+//     }
+//   }
+// };
+
+// function countObjKeys (obj) { // Сравнивает количество ключей объекта.
+//   let sum = 0;
+//   for (let key in obj) {
+//     sum += 1;
+//   }
+//   return sum;
+// }
+
+// function areObjectsEqual (obj1, obj2) { // Сравнивает значения ключей объектов, а затем если среди них есть вложенные объекты, то сравнивает их между собой.
+//   for (let key in obj1) {
+//     if (obj1[key] !== obj2[key]) {
+//       return false;
+//     }
+//     if ((typeof obj1[key] === 'object') && (typeof obj2[key] === 'object')) {
+//       for (let key in obj1) {
+//         areObjectsEqual(obj1[key], obj2[key]);
+//       }
+//     }
+//     return true;
+//   }
+//   return true;
+// }
+
+// function objCompare (obj1, obj2) {
+//   if (obj1 === obj2) {
+//     return true;
+//   } else {
+//     if (countObjKeys(obj1) !== countObjKeys(obj2)) {
+//       return false;
+//     }
+//     return areObjectsEqual(obj1, obj2);
+//   }
+// }
+
+// console.log(objCompare(obj1, obj2));
+
+// console.log(objCompare(
+//   { key: 'Value' },
+//   { key: 'Value' }
+// )); // -> true
+// console.log(objCompare(
+//   { key: 'Value' },
+//   { key: 'Value 1' }
+// )); // -> false
+// console.log(objCompare(
+//   { key: 'Value', nested: { key: 'Value' } },
+//   { key: 'Value', nested: { key: 'Value' } }
+// )); // -> true
+// console.log(objCompare(
+//   { key: 'Value', nested: { key: 'Value' } },
+//   { key: 'Value 1', nested: { key: 'Value' } }
+// )); // -> false
+
 
 // // Draw an area
 // // Draw an area N wide and N height like it the example below. Use ' @ ' and ' - '.
