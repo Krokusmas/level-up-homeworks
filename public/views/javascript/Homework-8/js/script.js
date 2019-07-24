@@ -87,11 +87,55 @@
 
 // filterRange(arr, 3, 5); // [5, 4, 3]
 
-// Task 9 Не решил.
-// «Решето Эратосфена»
+// Task 9 // Решето Эратосфена
+// function simpleNums (n) {
+//   let p = 2;
+//   let arr = [,,];
+//   let sum = 0;
+//   for (let i = 2; i < n; i += 1) {
+//     arr.push(true);
+//   }
+//   do {
+//     for (let i = p * 2; i < n; i += p) {
+//       arr[i] = false;
+//     }
+//     for (let i = p + 1; i < n; i += 1) {
+//       if (arr[i] = true) {
+//         p = i;
+//         break;
+//       }
+//     }
+//   } while (p * p < n);
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] === true) {
+//       sum += i;
+//     }
+//   }
+//   return console.log(sum);
+// }
+// simpleNums(100);
 
-// Task 10 Не решил.
-// Подмассив наибольшей суммы
+
+// Task 10
+// function getMaxSubSum (arr) {
+//   let tmpSum = 0;
+//   let maxSum = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     tmpSum += arr[i];
+//     if (tmpSum <= 0) {
+//       tmpSum = 0;
+//     } else {
+//       maxSum = Math.max(tmpSum, maxSum);
+//     }
+//   }
+//   return console.log(maxSum);
+// }
+// getMaxSubSum([-1, 2, 3, -9]); // 5
+// getMaxSubSum([2, -1, 2, 3, -9]); // 6
+// getMaxSubSum([-1, 2, 3, -9, 11]); // 11
+// getMaxSubSum([-2, -1, 1, 2]); // 3
+// getMaxSubSum([100, -9, 2, -3, 5]); // 100
+// getMaxSubSum([1, 2, 3]); // 6 (неотрицательные - берем всех)
 
 // Unit link: https://learn.javascript.ru/array-methods
 

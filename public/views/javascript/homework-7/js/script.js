@@ -11,22 +11,20 @@
 // Unit link - https://learn.javascript.ru/object-for-in
 
 // Task 1
+// var schedule = {};
+
 // function isEmpty (obj) {
 //   var key;
-//   var counter = 0;
 //   for (key in obj) {
-//     counter += 1;
+//     if (typeof key === 'string') {
+//       return false;
+//     }
 //   }
-//   if (counter > 0) {
-//     return false;
-//   } else {
-//     return true;
-//   }
+//   return true;
 // }
 
-// var schedule = {};
 // console.log(isEmpty(schedule)); // true
-// schedule["8:30"] = "подъём";
+// schedule['8:30'] = 'подъём';
 // console.log(isEmpty(schedule)); // false
 
 // Task 2
@@ -48,28 +46,28 @@
 
 // Task 3
 // var salaries = {
-//   "Вася": 100,
+//   'Вася': 100,
 //   "Петя": 300,
 //   "Даша": 250,
 // };
 
-// var counter = 0;
-// var maxSalary = 0;
-// var worker;
-// var key;
-
-// for (key in salaries) {
-//   counter += 1;
-//   if (maxSalary < salaries[key]) {
-//     maxSalary = salaries[key];
-//     worker = key;
+// function maxSalary (salaries) {
+//   let maxSal = 0;
+//   let worker;
+//   let key;
+//   if (typeof key !== 'string') {
+//     return console.log('нет сотрудников');
 //   }
+//   for (key in salaries) {
+//     if (maxSal < salaries[key]) {
+//       maxSal = salaries[key];
+//       worker = key;
+//     }
+//   }
+//   return console.log(worker);
 // }
-// if (counter < 1) {
-//   console.log('нет сотрудников');
-// } else {
-//   console.log(worker);
-// }
+
+// maxSalary(salaries);
 
 // Task 4
 // var menu = {
@@ -78,37 +76,32 @@
 //   title: "My menu",
 // };
 
-// function isNumeric (n) {
-//   return !isNaN(parseFloat(n)) && isFinite(n)
+// function isNumeric (key) {
+//   return !isNaN(parseFloat(key)) && isFinite(key);
 // }
 
-// var key;
-// var counter = 0;
-
-// function multiplyNumeric (n) {
-//   for (key in menu) {
-//     if (isNumeric(menu[key])) {
-//       menu[key] *= 2;
+// function multiplyNumeric (obj) {
+//   for (let key in obj) {
+//     if (isNumeric(obj[key])) {
+//       obj[key] *= 2;
 //     } 
 //   }
-//   return menu;
+//   return obj;
 // }
 // console.log(menu);
 // console.log(multiplyNumeric(menu));
 
 // ADDITIONAL TASKS
 // Reverse the given string
-// (function () {
-//   function strReverse (str) {
+// function strReverse (str) {
 //   let result = '';
-//   let n = str.length - 1;
-//   while (n >= 0) {
-//     result += str[n];
-//     n -= 1;  
+//   for (let n = str.length - 1; n >= 0; n -= 1) {
+//     result += str[n];  
 //   }
 //   return result;
 // }
-// }());
+
+// console.log(strReverse('My menu'));
 
 // Compare two objects
 // This function must return true if two objects refer to the same object or they refer to different objects but have the same keys number and their corresponding values are equal. The function must work with unlimited nestend objects. You can use "book" object with different set of properties to test.
@@ -135,7 +128,7 @@
 //   price: 240,
 //   hasIllustrations: true,
 //   author: {
-//     // name: 'George Orwell',
+//     name: 'George Orwell',
 //     dob: 'Jun 25 1903',
 //     size: {
 //       w: 10,
@@ -153,30 +146,30 @@
 //   return sum;
 // }
 
-// function areObjectsEqual (obj1, obj2) { // Сравнивает значения ключей объектов, а затем если среди них есть вложенные объекты, то сравнивает их между собой.
+// function innerObjectsCompare (obj1, obj2) { // Проверяет, есть ли вложенные объекты и сравнивает их.
 //   for (let key in obj1) {
-//     if (obj1[key] !== obj2[key]) {
-//       return false;
-//     }
 //     if ((typeof obj1[key] === 'object') && (typeof obj2[key] === 'object')) {
-//       for (let key in obj1) {
-//         areObjectsEqual(obj1[key], obj2[key]);
-//       }
+//       objCompare(obj1[key], obj2[key]);
 //     }
-//     return true;
 //   }
-//   return true;
 // }
 
 // function objCompare (obj1, obj2) {
-//   if (obj1 === obj2) {
+//   if (obj1 === obj2) { // Проверить ссылаются ли на один объект.
 //     return true;
 //   } else {
-//     if (countObjKeys(obj1) !== countObjKeys(obj2)) {
-//       return false;
+//     if (countObjKeys(obj1) !== countObjKeys(obj2)) { // Если нет - сравнить количество свойств объектов.
+//       return console.log('kol svojstv ne ravno false');
+//     } 
+//     for (let key in obj1) { { // Если равно - сравнить значения свойств объектов.
+//         if (obj1[key] !== obj2[key]) {
+//           return console.log('svojstv ne ravno false');
+//         }
+//       }
 //     }
-//     return areObjectsEqual(obj1, obj2);
+//     return innerObjectsCompare(obj1, obj2); // Если равно - проверить и сравнить вложенные объекты и свойства.
 //   }
+//   return true;
 // }
 
 // console.log(objCompare(obj1, obj2));
@@ -202,26 +195,27 @@
 // // Draw an area
 // // Draw an area N wide and N height like it the example below. Use ' @ ' and ' - '.
 
-// function arena (n) {
-//   var str = '';
-//   for (let i = 1; i <= n; i += 1) {
-//     str = i + ' @ ';
-//     if ((i === 1) || (i === n)) {
-//       for (let i = 1; i < n; i += 1) {
-//         str += ' @ '; 
+// (function () {
+//   function drawArena (n) {
+//     var str = '';
+//     for (let i = 1; i <= n; i += 1) {
+//       str = i + ' @ ';
+//       if ((i === 1) || (i === n)) {
+//         for (let i = 1; i < n; i += 1) {
+//           str += ' @ '; 
+//         }
+//         console.log(str);
+//       } else {
+//         for (let i = 2; i < n; i += 1) {
+//           str += ' - ';
+//         }
+//         str += ' @ ';
+//         console.log(str);
 //       }
-//       console.log(str);
-//     } else {
-//       for (let i = 2; i < n; i += 1) {
-//         str += ' - ';
-//       }
-//       str += ' @ ';
-//       console.log(str);
 //     }
 //   }
-// }
+// }());
 
-// console.log(arena(8));
 
 // // Strings comparison
 // // Check whether two strings have the same set of chars. Return true if they are equal length and have the same set of chars no matter at which index those chars are
@@ -244,4 +238,3 @@
 // console.log(strCompare('clock', 'lockc')); // -> true. Because two "c", one "l", one "o" and one "k". Doesn't matter they are at different positions
 // console.log(strCompare('tree', 'three')); // -> false. Different lenghts
 // console.log(strCompare('mttudd', 'dutmtd')); // -> true. Because two "t", two "d", one "m" and one "u". Doesn't matter they are at different positions
-// }
