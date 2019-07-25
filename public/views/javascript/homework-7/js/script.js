@@ -117,7 +117,7 @@ let obj1 = {
     size: {
       w: 10,
       h: 11,
-      sdfl: 13
+      // sdfl: 13
     }
   }
 };
@@ -153,24 +153,27 @@ function objCompare (obj1, obj2) { // Проверка ссылаются ли �
   if (countObjKeys(obj1) !== countObjKeys(obj2)) { // Проверка равно ли количество ключей.
     return false;
   }
-  for (let key in obj1) { // Проверка равны ли значения ключей.
-    if (obj1[key] !== obj2[key]) {
+  for (let key in obj1) { // проверить равны ли значения ключей.
+    if (obj1[key] !== obj2[key] && typeof obj1[key] !== 'object' && typeof obj2[key] !== 'object') {
       return false;
     }
   }
   for (let key in obj1) { // Проверка есть ли объекты среди значений.
-    if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
-      let result = objCompare(obj1[key], obj2[key]);
-      if (!result) {
-        return false; // Если рекурсия вернула, что объекты не равны.
-      }
-      return true; // Если среди значений больше нет объектов.
+    if (typeof obj1[key] === 'object') {
+      // let result = objCompare(obj1[key], obj2[key]);
+      
+        console.log('result');
+        // return false; // Если рекурсия вернула, что объекты не равны.
+
     }
+    console.log('если это есть в консоле, значит до сюда дошло');
+    return true;
   }
 }
 
 console.log(objCompare(obj1, obj2));
 
+console.log(typeof obj1 === 'object');
 // console.log(objCompare(
 //   { key: 'Value' },
 //   { key: 'Value' }

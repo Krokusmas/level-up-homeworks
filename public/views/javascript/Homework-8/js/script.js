@@ -239,19 +239,19 @@
 // Task 8 Не решил.
 
 // Task 9 Не решил.
-var list = {
-  value: 1,
-  next: {
-    value: 2,
-    next: {
-      value: 3,
-      next: {
-        value: 4,
-        next: null
-      }
-    }
-  }
-};
+// var list = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null
+//       }
+//     }
+//   }
+// };
 
 // function printList (list) { // Выводит элементы списка по очереди, при помощи цикла.
 //   while (list) {
@@ -290,8 +290,8 @@ var list = {
 // printReverseList(list);
 
 
-// Task 10 Не решил.
-// Отфильтровать анаграммы
+// Task 10 Не решил. Разобрали на уроке.
+// Отфильтровать анаграммы.
 
 // Task 11
 // Оставить уникальные элементы массива
