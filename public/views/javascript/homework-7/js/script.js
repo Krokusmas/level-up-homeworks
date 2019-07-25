@@ -105,74 +105,71 @@
 
 // Compare two objects
 // This function must return true if two objects refer to the same object or they refer to different objects but have the same keys number and their corresponding values are equal. The function must work with unlimited nestend objects. You can use "book" object with different set of properties to test.
-// let obj1 = {
-//   name: '1984',
-//   pages: 300,
-//   cover: 'Hard',
-//   price: 240,
-//   hasIllustrations: true,
-//   author: {
-//     name: 'George Orwell',
-//     dob: 'Jun 25 1903',
-//     size: {
-//       w: 10,
-//       h: 11,
-//       sdfl: 13
-//     }
-//   }
-// };
-// let obj2 = {
-//   name: '1984',
-//   pages: 300,
-//   cover: 'Hard',
-//   price: 240,
-//   hasIllustrations: true,
-//   author: {
-//     name: 'George Orwell',
-//     dob: 'Jun 25 1903',
-//     size: {
-//       w: 10,
-//       h: 11,
-//       sdfl: 13
-//     }
-//   }
-// };
+let obj1 = {
+  name: '1984',
+  pages: 300,
+  cover: 'Hard',
+  price: 240,
+  hasIllustrations: true,
+  author: {
+    name: 'George Orwell',
+    dob: 'Jun 25 1903',
+    size: {
+      w: 10,
+      h: 11,
+      sdfl: 13
+    }
+  }
+};
+let obj2 = {
+  name: '1984',
+  pages: 300,
+  cover: 'Hard',
+  price: 240,
+  hasIllustrations: true,
+  author: {
+    name: 'George Orwell',
+    dob: 'Jun 25 1903',
+    size: {
+      w: 10,
+      h: 11,
+      sdfl: 13
+    }
+  }
+};
 
-// function countObjKeys (obj) { // Сравнивает количество ключей объекта.
-//   let sum = 0;
-//   for (let key in obj) {
-//     sum += 1;
-//   }
-//   return sum;
-// }
+function countObjKeys (obj) {
+  let sum = 0;
+  for (let key in obj) {
+    sum += 1;
+  }
+  return sum;
+}
 
-// function innerObjectsCompare (obj1, obj2) { // Проверяет, есть ли вложенные объекты и сравнивает их.
-//   for (let key in obj1) {
-//     if ((typeof obj1[key] === 'object') && (typeof obj2[key] === 'object')) {
-//       objCompare(obj1[key], obj2[key]);
-//     }
-//   }
-// }
+function objCompare (obj1, obj2) { // Проверка ссылаются ли на один объкт.
+  if (obj1 === obj2) {
+    return true;
+  }
+  if (countObjKeys(obj1) !== countObjKeys(obj2)) { // Проверка равно ли количество ключей.
+    return false;
+  }
+  for (let key in obj1) { // Проверка равны ли значения ключей.
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  for (let key in obj1) { // Проверка есть ли объекты среди значений.
+    if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
+      let result = objCompare(obj1[key], obj2[key]);
+      if (!result) {
+        return false; // Если рекурсия вернула, что объекты не равны.
+      }
+      return true; // Если среди значений больше нет объектов.
+    }
+  }
+}
 
-// function objCompare (obj1, obj2) {
-//   if (obj1 === obj2) { // Проверить ссылаются ли на один объект.
-//     return true;
-//   } else {
-//     if (countObjKeys(obj1) !== countObjKeys(obj2)) { // Если нет - сравнить количество свойств объектов.
-//       return console.log('kol svojstv ne ravno false');
-//     } 
-//     for (let key in obj1) { { // Если равно - сравнить значения свойств объектов.
-//         if (obj1[key] !== obj2[key]) {
-//           return console.log('svojstv ne ravno false');
-//         }
-//       }
-//     }
-//     return innerObjectsCompare(obj1, obj2); // Если равно - проверить и сравнить вложенные объекты и свойства.
-//   }
-//   return true;
-// }
-
-// console.log(objCompare(obj1, obj2));
+console.log(objCompare(obj1, obj2));
 
 // console.log(objCompare(
 //   { key: 'Value' },

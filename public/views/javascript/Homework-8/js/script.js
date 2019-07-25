@@ -239,7 +239,56 @@
 // Task 8 Не решил.
 
 // Task 9 Не решил.
-// Вывести односвязный список.
+var list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+
+// function printList (list) { // Выводит элементы списка по очереди, при помощи цикла.
+//   while (list) {
+//     console.log(list.value);
+//     list = list.next;
+//   }
+// }
+// printList(list);
+
+// function printList (list) { // Выводит элементы списка по очереди, при помощи рекурсии.
+//   console.log(list.value);
+//   if (list.next) {
+//     printList(list.next);
+//   }
+// }
+// printList(list);
+
+// function printReverseList (list) { // Выводит элементы списка в обратном порядке, при помощи рекурсии.
+//   if (list.next) {
+//     printReverseList(list.next);
+//   }
+//   console.log(list.value);
+// }
+// printReverseList(list);
+
+// function printReverseList (list) { // Выводит элементы списка в обратном порядке, используюя не рекурсию, а цикл.
+//   let arr = [];
+//   while (list) {
+//     arr.push(list.value);
+//     list = list.next;
+//   }
+//   for (let i = arr.length; i >= 0 ; i -= 1) {
+//     console.log(arr[i]);
+//   }
+// }
+// printReverseList(list);
+
 
 // Task 10 Не решил.
 // Отфильтровать анаграммы
