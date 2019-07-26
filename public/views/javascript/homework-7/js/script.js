@@ -16,7 +16,7 @@
 // function isEmpty (obj) {
 //   var key;
 //   for (key in obj) {
-//     if (typeof key === 'string') {
+//     if (typeof key === 'string') { // Название свойства не может быть не строкой. Будет ошибка.
 //       return false;
 //     }
 //   }
@@ -47,16 +47,20 @@
 // Task 3
 // var salaries = {
 //   'Вася': 100,
-//   "Петя": 300,
-//   "Даша": 250,
+//   'Петя': 300,
+//   'Даша': 250,
 // };
 
 // function maxSalary (salaries) {
 //   let maxSal = 0;
 //   let worker;
 //   let key;
-//   if (typeof key !== 'string') {
-//     return console.log('нет сотрудников');
+//   let counter = 0;
+//   for (key in salaries) {
+//     counter += 1;
+//   }
+//   if (counter === 0) {
+//     return ('нет сотрудников');
 //   }
 //   for (key in salaries) {
 //     if (maxSal < salaries[key]) {
@@ -64,10 +68,10 @@
 //       worker = key;
 //     }
 //   }
-//   return console.log(worker);
+//   return worker;
 // }
 
-// maxSalary(salaries);
+// console.log(maxSalary(salaries));
 
 // Task 4
 // var menu = {
@@ -105,75 +109,75 @@
 
 // Compare two objects
 // This function must return true if two objects refer to the same object or they refer to different objects but have the same keys number and their corresponding values are equal. The function must work with unlimited nestend objects. You can use "book" object with different set of properties to test.
-let obj1 = {
-  name: '1984',
-  pages: 300,
-  cover: 'Hard',
-  price: 240,
-  hasIllustrations: true,
-  author: {
-    name: 'George Orwell',
-    dob: 'Jun 25 1903',
-    size: {
-      w: 10,
-      h: 11,
-      // sdfl: 13
-    }
-  }
-};
-let obj2 = {
-  name: '1984',
-  pages: 300,
-  cover: 'Hard',
-  price: 240,
-  hasIllustrations: true,
-  author: {
-    name: 'George Orwell',
-    dob: 'Jun 25 1903',
-    size: {
-      w: 10,
-      h: 11,
-      sdfl: 13
-    }
-  }
-};
+// let obj1 = {
+//   name: '1984',
+//   pages: 300,
+//   cover: 'Hard',
+//   price: 240,
+//   hasIllustrations: true,
+//   author: {
+//     name: 'George Orwell',
+//     dob: 'Jun 25 1903',
+//     size: {
+//       w: 10,
+//       h: 11,
+//       // sdfl: 13
+//     }
+//   }
+// };
+// let obj2 = {
+//   name: '1984',
+//   pages: 300,
+//   cover: 'Hard',
+//   price: 240,
+//   hasIllustrations: true,
+//   author: {
+//     name: 'George Orwell',
+//     dob: 'Jun 25 1903',
+//     size: {
+//       w: 10,
+//       h: 11,
+//       sdfl: 13
+//     }
+//   }
+// };
 
-function countObjKeys (obj) {
-  let sum = 0;
-  for (let key in obj) {
-    sum += 1;
-  }
-  return sum;
-}
+// function countObjKeys (obj) {
+//   let sum = 0;
+//   for (let key in obj) {
+//     sum += 1;
+//   }
+//   return sum;
+// }
 
-function objCompare (obj1, obj2) { // Проверка ссылаются ли на один объкт.
-  if (obj1 === obj2) {
-    return true;
-  }
-  if (countObjKeys(obj1) !== countObjKeys(obj2)) { // Проверка равно ли количество ключей.
-    return false;
-  }
-  for (let key in obj1) { // проверить равны ли значения ключей.
-    if (obj1[key] !== obj2[key] && typeof obj1[key] !== 'object' && typeof obj2[key] !== 'object') {
-      return false;
-    }
-  }
-  for (let key in obj1) { // Проверка есть ли объекты среди значений.
-    if (typeof obj1[key] === 'object') {
-      // let result = objCompare(obj1[key], obj2[key]);
+// function objCompare (obj1, obj2) { // Проверка ссылаются ли на один объкт.
+//   if (obj1 === obj2) {
+//     return true;
+//   }
+//   if (countObjKeys(obj1) !== countObjKeys(obj2)) { // Проверка равно ли количество ключей.
+//     return false;
+//   }
+//   for (let key in obj1) { // проверить равны ли значения ключей.
+//     if (obj1[key] !== obj2[key] && typeof obj1[key] !== 'object' && typeof obj2[key] !== 'object') {
+//       return false;
+//     }
+//   }
+//   for (let key in obj1) { // Проверка есть ли объекты среди значений.
+//     if (typeof obj1[key] === 'object') {
+//       // let result = objCompare(obj1[key], obj2[key]);
       
-        console.log('result');
-        // return false; // Если рекурсия вернула, что объекты не равны.
+//         console.log('result');
+//         // return false; // Если рекурсия вернула, что объекты не равны.
 
-    }
-    console.log('если это есть в консоле, значит до сюда дошло');
-    return true;
-  }
-}
+//     }
+//     console.log('если это есть в консоле, значит до сюда дошло');
+//     return true;
+//   }
+// }
 
-console.log(objCompare(obj1, obj2));
+// console.log(objCompare(obj1, obj2));
 
-console.log(typeof obj1 === 'object');
+// console.log(typeof obj1 === 'object');
 // console.log(objCompare(
 //   { key: 'Value' },
 //   { key: 'Value' }
