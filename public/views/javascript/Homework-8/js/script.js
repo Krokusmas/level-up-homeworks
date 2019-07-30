@@ -31,14 +31,14 @@
 //   return !isNaN(parseInt(n)) && isFinite(n);
 // }
 
-// var arr = [];
-// var char = 1;
+// let arr = [];
+// let char = 1;
 // let sum = 0;
 
 // while (isNumeric(char)) {
-//   char = parseInt((prompt('Введите число для сложения', '')));
+//   char = ((prompt('Введите число для сложения', '')));
 //   if (isNumeric(char)) {
-//     arr.push(char);
+//     arr.push(+char);
 //   }
 // }
 
@@ -56,36 +56,34 @@
 //   let n = 0;
 //   for (let i = 0; i < arr.length; i += 1) {
 //     if (arr[i] === value) {
-//       console.log(i);
 //       n += 1;
+//       return i;
 //     }
 //   }
 //   if (n === 0) {
-//     console.log(-1);
+//     return -1;
 //   }
 // }
 
-// find(arr, 'test'); // 0
-// find(arr, 2); // 1
-// find(arr, 1.5); // 2
-// find(arr, 0); // -1
+// console.log(find(arr, 'test')); // 0
+// console.log(find(arr, 2)); // 1
+// console.log(find(arr, 1.5)); // 2
+// console.log(find(arr, 0)); // -1
 
 // Task 8
 // var arr = [5, 4, 3, 8, 0];
-// var filtered = [];
 
 // function filterRange (arr, a, b) {
+//   let filtered = [];
 //   for (let i = 0; i < arr.length; i += 1) {
 //     if (arr[i] >= a && arr[i] <= b) {
 //       filtered.push(arr[i]);
 //     }
 //   }
-//   for (let i = 0; i < filtered.length; i += 1) {
-//     console.log(filtered[i]);
-//   }
+//   return filtered;
 // }
 
-// filterRange(arr, 3, 5); // [5, 4, 3]
+// console.log(filterRange(arr, 3, 5)); // [5, 4, 3]
 
 // Task 9 // Решето Эратосфена
 // function simpleNums (n) {
@@ -111,9 +109,9 @@
 //       sum += i;
 //     }
 //   }
-//   return console.log(sum);
+//   return sum;
 // }
-// simpleNums(100);
+// console.log(simpleNums(100));
 
 
 // Task 10
@@ -122,7 +120,7 @@
 //   let maxSum = 0;
 //   for (let i = 0; i < arr.length; i += 1) {
 //     tmpSum += arr[i];
-//     if (tmpSum <= 0) {
+//     if (tmpSum < 0) {
 //       tmpSum = 0;
 //     } else {
 //       maxSum = Math.max(tmpSum, maxSum);
@@ -189,10 +187,10 @@
 //   for (let i = 0; i < arr.length; i += 1) {
 //     if (arr[i] === cls) {
 //       arr.splice(i, 1);
-//       obj.className = arr.join(' ');
 //       i -= 1;
 //     }
 //   }
+//   obj.className = arr.join(' ');
 //   return obj.className;
 // }
 
@@ -224,21 +222,45 @@
 // arr.sort(sortNumDESC);
 // console.log(arr); // 8, 5, 2, 1, -10
 
-// Task 6
+// Task 6 // Не понимаю почему здесь бесконечный цикл, вроде всё должно работать.
+
 // var arr = ['HTML', 'JavaScript', 'CSS'];
-// var arrSorted = arr.concat();
-// arrSorted.sort(function (a, b) {
-//   return a > b ? 1 : a < b ? -1 : 0;
-// });
+// var arrSorted = [''];
+// for (let i = 0; i < arr.length; i += 1) {
+//   for (let j = 0; j < arrSorted.length; j += 1) {
+//     // if (arrSorted[j] === '') { // Если массив пустой, записать в него этот элемент.
+//     //   arrSorted.splice(0, 1, arr[i]);
+//     // }
+//     if ((arr[i].localeCompare(arrSorted[j]) === 1) || (arr[i].localeCompare(arrSorted[j]) === 0)) { // Если элемент первого массива меньше или равен какого-то из элементов второго массива, то записать первый перед вторым.
+//       arrSorted.splice(arrSorted[j], 0, arr[i]);
+//     } 
+//     if ((arr[i].localeCompare(arrSorted[j])) === -1) { // Если элемент первого массива окажется больше всех во втором, то записать его в конец второго. 
+//       arrSorted.splice(arrSorted.length, 0, arr[i]);
+//     }
+//   }
+// }
+
 // console.log(arrSorted); // CSS, HTML, JavaScript
 // console.log(arr); // HTML, JavaScript, CSS (без изменений)
 
 // Task 7
 // Случайный порядок в массиве. Не решил.
 
-// Task 8 Не решил.
+// Task 8
+// var vasya = {name: 'Вася', age: 23};
+// var masha = {name: 'Маша', age: 18};
+// var vovochka = {name: 'Вовочка', age: 6};
+// var people = [vasya, masha, vovochka];
 
-// Task 9 Не решил.
+// function sortByField (arr, field) {
+//   people.sort(function (a, b) {
+//     return a[field] > b[field] ? 1 : a[field] < b[field] ? -1 : 0;
+//   });
+// }
+// sortByField(people, 'age');
+// console.log(people[0].age) // 6
+
+// Task 9 Не решил. 
 // var list = {
 //   value: 1,
 //   next: {
@@ -313,7 +335,6 @@
 
 // Taks 1
 // var arr = ["Есть", "жизнь", "на", "Марсе"];
-// let i = 0;
 // let elementsLen = arr.map(function(item) {
 //   return item.length;
 // });
@@ -322,10 +343,10 @@
 // Task 2
 // var arr = [1, 2, 3, 4, 5]; // 1, 3, 6, 10, 15
 // var arr2 = [-2, -1, 0, 1]; // -2, -3, -3, -2
-// var result = [];
 
 // function getSums (arr) {
-//   arr.reduce(function(acc, item) {
+//   var result = [];
+//   arr.reduce(function (acc, item) {
 //     result.push(acc + item);
 //     return acc + item;
 //   }, 0);
