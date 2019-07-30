@@ -52,22 +52,109 @@
 // console.log(sum(5)(-1)); // 4
 
 // Task 2
-function makeBuffer(str) {
-  let currentStr = '';
-  function buffer () {
-    return currentStr;
-  }
-  buffer.set = function(str) {
-    currentStr += toString(str);
+// function makeBuffer () {
+//   let currentStr = '';
+//   return function (str) {
+//     if (arguments.length === 0) {
+//       return currentStr;  
+//     }
+//     currentStr += str;
+//   }
+// }
+
+// var buffer = makeBuffer();
+
+// buffer('Замыкания');
+// buffer(' Использовать');
+// buffer(' Нужно!');
+
+// console.log(buffer()); // Замыкания Использовать Нужно!
+
+// Task 3
+// function makeBuffer () {
+//   let currentStr = '';
+//   function counter (str) {
+//     if (arguments.length === 0) {
+//       return currentStr;  
+//     }
+//     currentStr += str;
+//   }
+//   counter.clear = function () {
+//       currentStr = '';
+//   }
+//   return counter;
+// }
+
+// var buffer = makeBuffer();
+
+// buffer('Тест');
+// buffer(' тебя не съест ');
+// console.log(buffer()); // Тест тебя не съест
+
+// buffer.clear();
+
+// console.log(buffer()); // ''
+
+// Task 4
+// var users = [{
+//   name: 'Вася',
+//   surname: 'Иванов',
+//   age: 20
+// }, {
+//   name: 'Петя',
+//   surname: 'Чапаев',
+//   age: 25
+// }, {
+//   name: 'Маша',
+//   surname: 'Медведева',
+//   age: 18
+// }];
+
+// function byField (field) {
+//   return function (a, b) {
+//     return a[field] > b[field] ? 1 : a[field] < b[field] ? -1 : 0;
+//   }
+// }
+
+// users.sort(byField('name'));
+// users.forEach(function(user) {
+//   console.log(user.name);
+// }); // Вася, Маша, Петя
+
+// users.sort(byField('age'));
+// users.forEach(function(user) {
+//   console.log(user.name);
+// }); // Маша, Вася, Петя
+
+// Task 5
+/* .. ваш код для filter, inBetween, inArray */
+function filter (arr, func) {
+  function inBetween (a, b) {
+    let resultArr = arr.slice(a, b + 1);
+    return resultArr;
   }
 }
+function inArray (userArr) {
+  let resultArr = [];
+  for (let i = 0; i < arr.length; i +=1) {
+    for (let j = 0; j < userArr.length; j += 1) {
+      if (arr[i] === userArr[j]) {
+        push.resultArr();
+      }
+    }
+  }
+  return resultArr;
+}
 
-var buffer = makeBuffer();
+var arr = [1, 2, 3, 4, 5, 6, 7];
 
-// добавить значения к буферу
-buffer('Замыкания');
-buffer(' Использовать');
-buffer(' Нужно!');
+console.log(filter(arr, function(a) {
+  return a % 2 == 0;
+})); // 2,4,6
 
-// получить текущее значение
-console.log(buffer()); // Замыкания Использовать Нужно!
+console.log(filter(arr, inBetween(3, 6))); // 3,4,5,6
+
+console.log(filter(arr, inArray([1, 2, 10]))); // 1,2
+
+
+
