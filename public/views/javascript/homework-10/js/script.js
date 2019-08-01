@@ -126,35 +126,48 @@
 //   console.log(user.name);
 // }); // Маша, Вася, Петя
 
-// Task 5
-/* .. ваш код для filter, inBetween, inArray */
-function filter (arr, func) {
-  function inBetween (a, b) {
-    let resultArr = arr.slice(a, b + 1);
-    return resultArr;
-  }
-}
-function inArray (userArr) {
-  let resultArr = [];
-  for (let i = 0; i < arr.length; i +=1) {
-    for (let j = 0; j < userArr.length; j += 1) {
-      if (arr[i] === userArr[j]) {
-        push.resultArr();
-      }
-    }
-  }
-  return resultArr;
-}
+// Task 5 // + Разобрали на уроке.
+// var arr = [1, 2, 3, 4, 5, 6, 7];
 
-var arr = [1, 2, 3, 4, 5, 6, 7];
+// function filter (arr, func) {
+//   const result = [];
 
-console.log(filter(arr, function(a) {
-  return a % 2 == 0;
-})); // 2,4,6
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (func(arr[i]) === true) {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result;
+// }
 
-console.log(filter(arr, inBetween(3, 6))); // 3,4,5,6
+// function inBetween (a, b) {
+//   return function (n) {
+//     return n >= a && n <= b;
+//   }
+// }
 
-console.log(filter(arr, inArray([1, 2, 10]))); // 1,2
+// function inArray (arr) {
+//   return function (item) {
+//     return arr.indexOf(item) !== -1;
+//   }
+// }
 
+// console.log(filter(arr, inBetween(3, 6))); // 3, 4, 5, 6
+// console.log(filter(arr, inArray([1, 2, 10]))); // 1, 2
 
+// Task 6
+// function makeArmy () {
+//   let shooters = [];
 
+//   let i = 0;
+//   while (i < 10) {
+//     let shooter = function() { // функция shooter
+//       console.log(i); // должна выводить порядковый номер
+//     };
+//     shooters.push(shooter()); // Нужно было добавить скобки после шутер для вызова функции. Иначе в каждый элемент массива клалась просто функция.
+//     i += 1;
+//   }
+//   return shooters;
+// }
+
+// let army = makeArmy();
