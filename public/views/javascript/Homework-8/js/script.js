@@ -222,23 +222,12 @@
 // arr.sort(sortNumDESC);
 // console.log(arr); // 8, 5, 2, 1, -10
 
-// Task 6 // Не понимаю почему здесь бесконечный цикл, вроде всё должно работать.
+// Task 6 // Разобрали на уроке.
 
 // var arr = ['HTML', 'JavaScript', 'CSS'];
-// var arrSorted = [''];
-// for (let i = 0; i < arr.length; i += 1) {
-//   for (let j = 0; j < arrSorted.length; j += 1) {
-//     // if (arrSorted[j] === '') { // Если массив пустой, записать в него этот элемент.
-//     //   arrSorted.splice(0, 1, arr[i]);
-//     // }
-//     if ((arr[i].localeCompare(arrSorted[j]) === 1) || (arr[i].localeCompare(arrSorted[j]) === 0)) { // Если элемент первого массива меньше или равен какого-то из элементов второго массива, то записать первый перед вторым.
-//       arrSorted.splice(arrSorted[j], 0, arr[i]);
-//     } 
-//     if ((arr[i].localeCompare(arrSorted[j])) === -1) { // Если элемент первого массива окажется больше всех во втором, то записать его в конец второго. 
-//       arrSorted.splice(arrSorted.length, 0, arr[i]);
-//     }
-//   }
-// }
+// var arrSorted = arr.slice().sort((a, b) => a.localeCompare(b));
+// console.log(arrSorted);
+
 
 // console.log(arrSorted); // CSS, HTML, JavaScript
 // console.log(arr); // HTML, JavaScript, CSS (без изменений)
@@ -355,120 +344,100 @@
 
 // console.log(getSums(arr));
 
-// Additional task 1.
+// Additional task 1 // + every разобрали на уроке.
 // const arr = [1, 10, 100, 1000, 10000]; // Проверка массива на положительные или отрицаельные элементы. Если все положительные - true. Иначе false.
-// var n = 0;
-
+// const arr = [1, 10, 100, 1000, 10000];
 // function every (arr, cb) {
 //   for (let i = 0; i < arr.length; i += 1) {
-//     cb(arr[i], i);
+//     if (!cb(arr[i], i)) {
+//       return false;
+//     }
 //   }
-//   if (n === arr.length) {
-//     console.log(true);
-//   } else {
-//     console.log(false);
-//   }
+//   return true;
 // }
+// const res = every(arr, function (n) {
+//   return n % 2 === 0;
+// });
+// console.log(res);
 
-// function callback (item, i) {
-//   if (arr[i] > 0) {
-//     n += 1;
-//   }
-// }
-
-// every(arr, callback);
-
-// Additional task 2.
+// Additional task 2
 // const arr = [1, 0, 100, 1000, 10000]; // Проверка любого элемента массива на равество нулю. Если хотя бы 1 равен нулю, то true.
-// var n = 0;
+
+// const arr = [1, 10, 100, 1000, 10000];
 
 // function some (arr, cb) {
 //   for (let i = 0; i < arr.length; i += 1) {
-//     cb(arr[i], i);
+//     if (cb(arr[i], i)) {
+//       return true;
+//     }
 //   }
-//   if (n > 0) {
-//     console.log(true);
-//   } else {
-//     console.log(false);
-//   }
+//   return false;
 // }
+// const res = some(arr, (n) => n === 0);
+// console.log(res);
 
-// function callback (item, i) {
-//   if (arr[i] === 0) {
-//     n += 1;
-//   }
-// }
-
-// some(arr, callback);
-
-// Additional task 3.
-// const arr = [1, 10, 100, 1000, 10000]; // filter. Создать массив в который войдут элементы из массива arr, которые больше 10.
-// var newArr = [];
+// Additional task 3 // + Рзобрали на уроке.
+// filter. Создать массив в который войдут элементы из массива arr, которые больше 10.
+// const arr = [1, 10, 100, 1000, 10000];
 
 // function filter (arr, cb) {
+//   const result = [];
 //   for (let i = 0; i < arr.length; i += 1) {
-//     cb(arr[i], i);
+//     if (cb(arr[i], i) === true) {
+//       result.push(arr[i]);
+//     }
 //   }
-//   console.log(newArr);
+//   return result;
 // }
 
-// function callback (item, i) {
-//   if (arr[i] > 10) {
-//     newArr.push(arr[i]);
-//   }
-// }
+// const oddNums = filter(arr, function (n) {
+//   return n % 2 !== 0;
+// });
+// console.log(oddNums);
 
-// filter(arr, callback);
-
-// Additional task 4.
+// Additional task 4
 // const arr = ['HTML', 'CSS', 'JavaScript']; // map. Создать массив с длинами элементов массива arr.
-// var newArr = [];
+// const result = [];
 
 // function map (arr, cb) {
 //   for (let i = 0; i < arr.length; i += 1) {
-//     cb(arr[i], i);
+//     if (cb(arr[i], i) === true) {
+//       result.push(arr[i].length);
+//     }
 //   }
-//   console.log(newArr);
+//   return result;
 // }
 
-// function callback (item, i) {
-//   newArr.push(arr[i].length);
-// }
+// const arrLen = map(arr, (n) => n !== '');
 
-// map(arr, callback);
+// console.log(arrLen);
 
-// Additional task 5.
+// Additional task 5 // + Разобрали на уроке
 // const arr = [1, 10, 100, 1000, 10000]; // reduce. Получить сумму всех элементов массива.
-// let result = 0;
-// let initialValue = 0;
 
-// function reduce (arr, cb, initialValue) {
-//   for (let i = initialValue; i < arr.length; i += 1) {
-//     cb(arr[i], i);
+// function reduce (arr, cb, initialValue = undefined) {
+//   let acc = initialValue !== undefined ? initialValue : arr[0];
+//   let i = initialValue !== undefined ? 0 : 1;
+//   for (; i < arr.length; i += 1) {
+//     acc = cb(acc, arr[i], i);
 //   }
-//   console.log(result);
+//   return acc;
 // }
 
-// function callback (item, i) {
-//   result += arr[i];
-// }
-
-// reduce(arr, callback, initialValue);
+// const sum = reduce(arr, (acc, item) => acc + item);
+// console.log(sum); // 11111
 
 // Additional task 6.
 // const arr = [1, 10, 100, 1000, 10000]; // reduceRight. Получить сумму всех элементов массива, но справа-налево.
-// let result = 0;
-// let initialValue = arr.length - 1;
 
-// function reduceRight (arr, cb, initialValue) {
-//   for (let i = initialValue; i >= 0; i -= 1) {
-//     cb(arr[i], i);
+// function reduceRight (arr, cb, initialValue = undefined) {
+//   let acc = initialValue !== undefined ? initialValue : arr[arr.length - 1];
+//   let i = initialValue !== undefined ? arr.length - 1 : arr.length - 2;
+//   for (; i >= 0; i -= 1) {
+//     acc = cb(acc, arr[i], i);
 //   }
-//   console.log(result);
+//   return acc;
 // }
 
-// function callback (item, i) {
-//   result += arr[i];
-// }
-
-// reduceRight(arr, callback, initialValue);
+// const sum = reduceRight(arr, (acc, item) => acc + item);
+// console.log(sum); // 11111
