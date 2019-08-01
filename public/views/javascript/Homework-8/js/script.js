@@ -401,14 +401,12 @@
 
 // function map (arr, cb) {
 //   for (let i = 0; i < arr.length; i += 1) {
-//     if (cb(arr[i], i) === true) {
-//       result.push(arr[i].length);
-//     }
+//     result.push(cb(arr[i], i));
 //   }
 //   return result;
 // }
 
-// const arrLen = map(arr, (n) => n !== '');
+// const arrLen = map(arr, (n) => n.length);
 
 // console.log(arrLen);
 
