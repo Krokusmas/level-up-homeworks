@@ -36,7 +36,7 @@
 // let sum = 0;
 
 // while (isNumeric(char)) {
-//   char = ((prompt('Введите число для сложения', '')));
+//   char = (prompt('Введите число для сложения', ''));
 //   if (isNumeric(char)) {
 //     arr.push(+char);
 //   }
@@ -60,9 +60,7 @@
 //       return i;
 //     }
 //   }
-//   if (n === 0) {
-//     return -1;
-//   }
+//   return -1;
 // }
 
 // console.log(find(arr, 'test')); // 0
@@ -324,7 +322,7 @@
 
 // Taks 1
 // var arr = ["Есть", "жизнь", "на", "Марсе"];
-// let elementsLen = arr.map(function(item) {
+// let elementsLen = arr.map(function (item) {
 //   return item.length;
 // });
 // console.log(elementsLen); // 4,5,2,5
