@@ -11,11 +11,10 @@ var vasya = new User('Василий Попкин');
 Object.defineProperty(vasya, 'firstName', {writable: true, configurable: true});
 Object.defineProperty(vasya, 'lastName', {writable: true, configurable: true});
 
-Object.defineProperty(vasya, 'lastName', {
-  fullName: {
-    get: function () {
-      return this._firstName + ' ' + this._lastName;
-    },
+Object.defineProperty(vasya, 'fullName', {
+  get: function () {
+    this.fullName = this._firstName + ' ' + this._lastName;
+    return this._fullName;
   }
 });
 
