@@ -13,9 +13,12 @@ Object.defineProperty(vasya, 'lastName', {writable: true, configurable: true});
 
 Object.defineProperty(vasya, 'fullName', {
   get: function () {
-    this.fullName = this._firstName + ' ' + this._lastName;
     return this._fullName;
-  }
+  },
+  set: function () {
+     this.fullName = this._firstName + ' ' + this._lastName;
+     return this._fullName;
+    }
 });
 
 Object.defineProperties(vasya, {
