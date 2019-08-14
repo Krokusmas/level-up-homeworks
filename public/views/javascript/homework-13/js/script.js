@@ -4,45 +4,27 @@
 // Task 1
 function User (fullName) {
   this.fullName = fullName;
+  Object.defineProperties(this, {
+    firstName: {
+      get: function () {
+        return this.fullName.split(' ')[0];
+      },
+      set: function (value) {
+        this.fullName = value + ' ' + this.lastName;
+      }
+    },
+    lastName: {
+      get: function () {
+        return this.fullName.split(' ')[1];
+      },
+      set: function (value) {
+       this.fullName = this.firstName + ' ' + value;
+      }
+    }
+  });
 }
 
 var vasya = new User('Василий Попкин');
-
-Object.defineProperty(vasya, 'firstName', {writable: true, configurable: true});
-Object.defineProperty(vasya, 'lastName', {writable: true, configurable: true});
-
-Object.defineProperty(vasya, 'fullName', {
-  get: function () {
-    return this._fullName;
-  },
-  set: function () {
-     this.fullName = this._firstName + ' ' + this._lastName;
-     return this._fullName;
-    }
-});
-
-Object.defineProperties(vasya, {
-  firstName: {
-    get: function () {
-      let arr = this.fullName.split(' ');
-      this.firstName = arr[0];
-      return this._firstName;
-    },
-    set: function (value) {
-     this._firstName = value;
-    }
-  },
-  lastName: {
-    get: function () {
-      let arr = this.fullName.split(' ');
-      this.lastName = arr[1];
-      return this._lastName;
-    },
-    set: function (value) {
-     this._lastName = value;
-    }
-  }
-});
 
 // чтение firstName/lastName
 console.log(vasya.firstName); // Василий
