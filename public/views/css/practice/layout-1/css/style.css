@@ -6,6 +6,33 @@ html {
   height: 100%;
   font-size: 16px;
 }
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/Exo-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Exo-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Exo-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Exo-RegularItalic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Exo-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Exo-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Exo-Thin.ttf") format("truetype");
+}
+
+
+
 body {
   height: 100%;
 }
@@ -32,31 +59,17 @@ body {
   position: relative;
   display: flex;
 }
-.main-block {
-  margin: 0 auto;
-  height: 600px;
-  width: 1100px;
-  border-radius: 10px;
-  background-image: url('../images/pic.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 20px 40px 40px rgba(0,0,0,0.8);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+p {
+  font-family: "Exo";
+  color: white;
+  font-size: 50px;
 }
-.left-block {
-  width: 10%;
-  height: 100%;
-  outline: 1px solid orange;
+.thin {
+
+  font-weight: 100;
 }
 .right-block {
-  width: 90%;
-  height: 100%;
-  outline: 1px solid blue;
+  border-color: 1px, solid, white;
 }
 .footer {
   height: 80px;
