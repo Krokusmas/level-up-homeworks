@@ -16,60 +16,78 @@ html {
   font-family: "Exo-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Exo-Thin.ttf") format("truetype");
+  src: url("../fonts/Exo-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Exo-RegularItalic";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Exo-Thin.ttf") format("truetype");
+  src: url("../fonts/Exo-RegularItalic.ttf") format("truetype");
 }
 @font-face {
   font-family: "Exo-Medium";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Exo-Thin.ttf") format("truetype");
+  src: url("../fonts/Exo-Medium.ttf") format("truetype");
 }
-
-
-
+.thin {
+  font-weight: 100;
+  font-family: "Exo";
+}
+.regular {
+  font-family: "Exo-Regular";
+  font-weight: 400;
+}
 body {
   height: 100%;
 }
 .wrapper {
-  background-color: rgba(58, 9, 41, 1);
-  background-image: linear-gradient(
-    to right,
-    rgba(240, 240, 240, 0.1), rgba(0, 0, 0, 0.1)
-    ),
-  repeating-linear-gradient(
-  to right,
-  rgba(97, 21, 68, 0), rgba(97, 21, 68, 0) 20%,
-  rgba(97, 21, 68, 0.1) 20%, rgba(97, 21, 68, 0.1) 20.2%);
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 .header {
-  height: 80px;
+  background-image: url("../images/header-background.jpg");
+  height: 812px;
+  width: 1440px;
+}
+.header-content {
+  height: 812px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 228px;
+}
+.main-title {
+  font-size: 60px;
+}
+.main-title-upper-part {
+  margin-bottom: 20px;
+}
+.main-title-down-part {
+  margin-bottom: 40px;
+}
+.play-button {
+  height: 59px;
+  width: 59px;
+  background-image: url("../images/play-logo.png");
+  margin-bottom: 39px;
+}
+.header-button {
+  height: 40px;
+  width: 150px;
+  background-color: #FF6D6D;
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 20px;
 }
 .content {
   flex: 1 1 auto;
   padding: 0 100px;
   position: relative;
   display: flex;
-}
-p {
-  font-family: "Exo";
-  color: white;
-  font-size: 50px;
-}
-.thin {
-
-  font-weight: 100;
-}
-.right-block {
-  border-color: 1px, solid, white;
 }
 .footer {
   height: 80px;
