@@ -1,7 +1,7 @@
 'use strict';
 // Unit link - http://web.archive.org/web/20190515020906/http://learn.javascript.ru/class-instanceof
 
-// Task 1 // Решал два часа потом подсмотрел ответы.
+// Task 1 // Решал пару часов потом подсмотрел ответы.
 
 // function getSomeDate (date) {
 //   var day = date.getDate();
