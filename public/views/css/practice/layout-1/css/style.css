@@ -7,7 +7,7 @@ html {
   font-size: 16px;
 }
 @font-face {
-  font-family: "Exo";
+  font-family: "Exo-Thin";
   font-style: normal;
   font-weight: 100;
   src: url("../fonts/Exo-Thin.ttf") format("truetype");
@@ -32,11 +32,10 @@ html {
 }
 .thin {
   font-weight: 100;
-  font-family: "Exo";
+  font-family: "Exo-Thin";
 }
 .regular {
   font-family: "Exo-Regular";
-  font-weight: 400;
 }
 body {
   height: 100%;
@@ -48,46 +47,62 @@ body {
   width: 100%;
   margin: 0 auto;
 }
-.header {
-  background-image: url("../images/header-background.jpg");
-  height: 812px;
-  width: 1440px;
-}
-.header-content {
+.section-promo {
+  background-image: url("../images/1440.jpg");
+  background-size: cover;
   height: 812px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 228px;
+  flex-shrink: 0;
 }
-.main-title {
+.promo-content {
+  text-align: center;
+  width: 710px;
+}
+.section-promo-title {
   font-size: 60px;
 }
-.main-title-upper-part {
-  margin-bottom: 20px;
+.promo-action-wrapper {
+  padding: 39px 0px;
 }
-.main-title-down-part {
-  margin-bottom: 40px;
+.button-play {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  background-color: #8286A3;
+  border-radius: 50%;
+  position: relative;
 }
-.play-button {
-  height: 59px;
-  width: 59px;
-  background-image: url("../images/play-logo.png");
-  margin-bottom: 39px;
+.triangle__button-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -10px;
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(-147deg, transparent 11px, white 0) top right, linear-gradient(-34deg, transparent 11px, white 0) bottom right;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
 }
-.header-button {
-  height: 40px;
+.sell-button-wrapper {
+  margin-bottom: 19px;
+}
+.sell-button {
   width: 150px;
+}
+.button {
+  font-family: "Exo-Regular";
+  height: 40px;
+  min-width: 64px;
   background-color: #FF6D6D;
   border-radius: 4px;
   color: white;
-  margin-bottom: 20px;
 }
 .content {
-  flex: 1 1 auto;
-  padding: 0 100px;
-  position: relative;
-  display: flex;
+  
 }
 .footer {
   height: 80px;
