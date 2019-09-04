@@ -30,10 +30,6 @@ html {
   font-weight: 500;
   src: url("../fonts/Exo-Medium.ttf") format("truetype");
 }
-.thin {
-  font-weight: 100;
-  font-family: "Exo-Thin";
-}
 .regular {
   font-family: "Exo-Regular";
 }
@@ -41,8 +37,8 @@ body {
   height: 100%;
 }
 .wrapper {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   height: 100%;
   width: 100%;
   margin: 0 auto;
@@ -54,14 +50,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-shrink: 0;
 }
-.promo-content {
+.promo-title {
   text-align: center;
-  width: 710px;
+  max-width: 710px;
 }
-.section-promo-title {
+h1 {
   font-size: 60px;
+  font-weight: 100;
+  font-family: "Exo-Thin";
 }
 .promo-action-wrapper {
   padding: 39px 0px;
