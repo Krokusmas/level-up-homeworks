@@ -56,6 +56,7 @@ body {
 .promo-title {
   text-align: center;
   max-width: 710px;
+  margin-bottom: 39px;
 }
 h1 {
   font-size: 60px;
@@ -63,7 +64,7 @@ h1 {
   font-family: "Exo-Thin";
 }
 .promo-action-wrapper {
-  padding: 39px 0px;
+  margin-bottom: 39px;
 }
 .button-play {
   display: inline-block;
