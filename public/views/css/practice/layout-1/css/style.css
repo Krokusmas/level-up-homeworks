@@ -7,41 +7,53 @@ html {
   font-size: 16px;
 }
 @font-face {
-  font-family: "Exo-Thin";
+  font-family: "Exo";
   font-style: normal;
   font-weight: 100;
   src: url("../fonts/Exo-Thin.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Exo-Regular";
+  font-family: "Exo";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Exo-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Exo-RegularItalic";
+  font-family: "Exo";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Exo-RegularItalic.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Exo-Medium";
+  font-family: "Exo";
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/Exo-Medium.ttf") format("truetype");
 }
-.regular {
-  font-family: "Exo-Regular";
-}
 body {
   height: 100%;
+  font-family: Exo, Arial, sans-serif;
+  background-color: white;
+  color: black;
 }
-.wrapper {
-  /*display: flex;
-  flex-direction: column;*/
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  flex: 0 1 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .section-promo {
   background-image: url("../images/1440.jpg");
